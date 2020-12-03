@@ -1,0 +1,127 @@
+.blog {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+  
+  .blog-title {
+    margin-top: 18px;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 40px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: #1e0606;
+  }
+  
+  .blog-block-title {
+    padding-left: 110px;
+  }
+  
+  .blog-block {
+    width: 1250px;
+    padding-top: 14px;
+  }
+  
+  .blog-navigation-link-page,
+  .blog-navigation-link-disabled {
+    font-family: "Crimson Text", "Arial", sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+    color: #1e0606;
+  }
+  
+  .blog-navigation-link-page:hover {
+    opacity: 0.5;
+  }
+  
+  .blog-navigation-link-disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
+  .blog-navigation-list-page {
+    padding-top: 8px;
+    display: flex;
+  }
+  
+  .blog-navigation::after {
+    content: url(/static/images/Vector-Stroke.png);
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .blog-item-list {
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    display: flex;
+  }
+  
+  .blog-navigation-page {
+    padding: 0px 106px 44px 102px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+  
+  .blog-navigation-list {
+    display: flex;
+    padding: 0px 10px 0px 65px;
+  }
+  
+  .blog-navigation-link,
+  .blog-navigation-link-active {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #1e0606;
+  }
+  
+  .blog-navigation-link-active {
+    color: #c29974;
+  }
+  
+  .blog-navigation-item {
+    margin-top: -15px;
+    padding-right: 55px;
+  }
+  
+  .blog-navigation-item-number,
+  .blog-navigation-item-number-active {
+    border: none;
+    background-color: transparent;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+  
+  .blog-navigation-item-number {
+    cursor: pointer;
+    color: #1e0606;
+  }
+  
+  .blog-navigation-item-number:hover {
+    opacity: 0.5;
+  }
+  
+  .blog-navigation-item-number-active {
+    color: #c29974;
+  }
+  
+  .vector-page {
+    border: none;
+    background-color: transparent;
+    margin-top: -10px;
+    cursor: pointer;
+  }
+  .vector-page:hover path {
+    stroke: #c29974;
+  }
+  
+  .vector-page:active {
+    opacity: 0.5;
+  }
+  

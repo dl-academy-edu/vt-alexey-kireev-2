@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Simple gulp application",
   "main": "gulpfile.js",
-  "author": "Alexey Kireev <->",
+  "author": "Alexey Kireev",
   "license": "MIT",
   "dependencies": {
     "browser-sync": "^2.26.5",
