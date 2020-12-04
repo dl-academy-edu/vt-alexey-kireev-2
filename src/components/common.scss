@@ -1,0 +1,50 @@
+* {
+  font-family: "Open Sans", "Montserrat", "Roboto", "Crimson Text", Arial,
+    sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.visibility-hidden {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -9999px;
+}
+// Подключение компонентов
+@import "./header/header";
+@import "./footer/footer";
+@import "./category-products-block-item/category-products-block-item";
+@import "./toys-item/toys-item";
+@import "./blog-item/blog-item";
+@import "./button/button";
+@import "./link/link";
