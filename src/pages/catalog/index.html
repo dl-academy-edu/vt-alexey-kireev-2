@@ -13,65 +13,76 @@
 
 <body>
     @@include('header/index.html')
-    <div class="catalog-block-title container">
-        <h1 class="catalog-title">CATEGORY PRODUCTS</h1>
-        <div class="catalog-block-navigation">
-            <ul class="catalog-navigation-list">
-                <li class="catalog-navigation-item">
-                    <a class="catalog-navigation-link" href="/" title="Home">Home</a>
+    <div class="navigation container">
+        <h1>CATEGORY PRODUCTS</h1>
+        <div class="navigation__content">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a class="navigation__link" href="/" title="Home">Home</a>
                 </li>
                 <li>
-                    <div class="catalog-navigation-link-disabled">Catalog</div>
+                    <div class="navigation__link-disabled">Catalog</div>
                 </li>
             </ul>
         </div>
     </div>
     <main class="catalog container">
-        <article class="catalog-block ">
-            <ul class="catalog-block-list">
-                @@include("category-products-block-item/index.html", {
-                "title": "APPAREL KIDS",
-                "title-link": "apparel kids",
-                "img": "image-1.jpg"
-                })
-                @@include("category-products-block-item/index.html", {
-                "title": "HOLIDAY SHOP",
-                "title-link": "holiday shop",
-                "img": "image-2.jpg"
-                })
-                @@include("category-products-block-item/index.html", {
-                "title": "TOYS",
-                "title-link": "toys",
-                "img": "image-3.jpg"
-                })
-                @@include("category-products-block-item/index.html", {
-                "title": "ACCESSORIES",
-                "title-link": "accessories",
-                "img": "image-4.jpg"
-                })
-                @@include("category-products-block-item/index.html", {
-                "title": "SALE",
-                "title-link": "sale",
-                "img": "image-5.jpg"
-                })
-                @@include("category-products-block-item/index.html", {
-                "title": "apparel adults",
-                "title-link": "apparel adults",
-                "img": "image-6.jpg"
-                })
-
+        <article class="catalog__contect">
+            <ul class="grid-list">
+                <li class="grid-list__item">
+                    @@include("category-card/index.html", {
+                    "title": "APPAREL KIDS",
+                    "title-link": "apparel kids",
+                    "img": "image-1.jpg"
+                    })
+                </li>
+                <li class="grid-list__item">
+                    @@include("category-card/index.html", {
+                    "title": "HOLIDAY SHOP",
+                    "title-link": "holiday shop",
+                    "img": "image-2.jpg"
+                    })
+                </li>
+                <li class="grid-list__item">
+                    @@include("category-card/index.html", {
+                    "title": "TOYS",
+                    "title-link": "toys",
+                    "img": "image-3.jpg"
+                    })
+                </li>
+                <li class="grid-list__item">
+                    @@include("category-card/index.html", {
+                    "title": "ACCESSORIES",
+                    "title-link": "accessories",
+                    "img": "image-4.jpg"
+                    })
+                </li>
+                <li class="grid-list__item">
+                    @@include("category-card/index.html", {
+                    "title": "SALE",
+                    "title-link": "sale",
+                    "img": "image-5.jpg"
+                    })
+                </li>
+                <li class="grid-list__item">
+                    @@include("category-card/index.html", {
+                    "title": "apparel adults",
+                    "title-link": "apparel adults",
+                    "img": "image-6.jpg"
+                    })
+                </li>
             </ul>
         </article>
     </main>
-    <section class="product-description-block container">
-        <h2 class="product-description-title">Product Description</h2>
-        <p class="product-description">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and
+    <section class="description container">
+        <h2>Product Description</h2>
+        <p>Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and
             almost really cry. You can even
             bathe her, just like a little sister.</p>
-        <p class="product-description">A toy with a height of 43 cm bends its knees, the head rotates, it can stand
+        <p>A toy with a height of 43 cm bends its knees, the head rotates, it can stand
             upright. Such a doll will be an
             excellent choice for a gift for a girl from 4 years old.</p>
-        <p class="product-description">The set includes a miniature set of fashionable clothes, a hairbrush, a bottle
+        <p>The set includes a miniature set of fashionable clothes, a hairbrush, a bottle
             for water, a pair of hairpins
             and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.
         </p>

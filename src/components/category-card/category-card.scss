@@ -1,0 +1,39 @@
+.category-card {
+  &__img {
+    position: absolute;
+    z-index: -1;
+  }
+
+  h3 {
+    overflow: hidden;
+
+    width: 190px;
+
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 26px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
+
+    text-align: center;
+  }
+
+  &__link {
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 280px;
+    min-height: 270px;
+
+    &:hover,
+    &:active {
+      text-decoration-line: underline;
+      text-decoration-color: #ffffff;
+    }
+  }
+}

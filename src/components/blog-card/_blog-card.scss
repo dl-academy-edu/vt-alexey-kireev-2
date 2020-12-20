@@ -1,40 +1,36 @@
-.blog-item {
-    margin-right: 20px;
-    margin-bottom: 30px;
-    display: block;
-    max-width: 380px;
-  }
-  
-  .block-item-img {
+.blog-card {
+  max-width: 380px;
+
+  &__img {
     margin-bottom: 20px;
   }
-  
-  .blog-item-date {
+
+  &__date {
     padding-bottom: 7px;
     font-size: 16px;
     line-height: 22px;
     color: #818181;
   }
-  
-  .blog-item-bold-text {
+
+  h2 {
     cursor: pointer;
-    padding-bottom: 15px;
+    padding-bottom: 19px;
     font-family: "Montserrat", "Arial", sans-serif;
     font-size: 24px;
     line-height: 31px;
     color: #1e0606;
   }
-  
-  .block-item-link:hover,
-  .block-item-link:active {
+
+  &__link:hover,
+  &__link:active {
     cursor: pointer;
     text-decoration-line: underline;
     text-decoration-color: #000000;
   }
-  
-  .blog-item-description {
+
+  p {
     font-size: 18px;
     line-height: 25px;
     color: #1e0606;
   }
-  
+}

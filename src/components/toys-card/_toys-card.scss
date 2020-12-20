@@ -1,22 +1,26 @@
-.toys-text {
-    padding-top: 30px;
-    padding-bottom: 15px;
+.toys-card {
+  max-width: 393px;
+  position: relative;
+
+  h2 {
+    padding-top: 29px;
+    padding-bottom: 14px;
     font-weight: normal;
     font-size: 14px;
     line-height: 19px;
     text-align: center;
     color: #1e0606;
   }
-  
-  .toys-price {
+
+  p {
     font-weight: bold;
     font-size: 16px;
     line-height: 22px;
     text-align: center;
     color: #1e0606;
   }
-  
-  .toys-img:hover::after {
+
+  &__link:hover::after {
     content: "LEARN MORE";
     width: 207px;
     height: 207px;
@@ -28,9 +32,9 @@
     right: 0;
     top: 90px;
     opacity: 0.9;
-  
+
     /* Текст */
-  
+
     font-family: "Montserrat", "Arial", sans-serif;
     font-weight: bold;
     font-size: 26px;
@@ -41,14 +45,8 @@
     color: #1e0606;
     text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
   }
-  
-  .toys-img:active::after {
+
+  &__link:active::after {
     opacity: 0.67;
   }
-  
-  .toys-item {
-    position: relative;
-    max-width: 393px;
-    cursor: pointer;
-    margin: -3px 19px 47px 1px;
-  }
+}

@@ -13,56 +13,59 @@
 
 <body>
     @@include('header/index.html')
-    <div class="contact-us-block-title container">
-        <h1 class="contact-us-title">CONTACT US</h1>
-        <ul class="contact-us-navigation-list">
-            <li class="contact-us-navigation">
-                <a class="contact-us-navigation-link" href="/" title="Go to Home">Home</a>
+    <div class="navigation container">
+        <h1>CONTACT US</h1>
+        <ul class="navigation__list">
+            <li class="navigation__item">
+                <a class="navigation__link" href="/" title="Go to Home">Home</a>
             </li>
             <li>
-                <a href="#" class="contact-us-navigation-link-disabled" tabindex="1">Contact Us</a>
+                <a href="#" class="navigation__link-disabled" tabindex="1">Contact Us</a>
             </li>
         </ul>
     </div>
-    <main class="contact-us-block container">
-        <form class="contact-us-form" action="#">
-            <div class="contact-us-input" title="Click on Name">
-                <label class="input-label" for="name">Name</label>
-                <input class="contact-us-input-item" type="text" id="name" placeholder="Ivan Ivanov">
+    <main class="contact-us container">
+
+        <form class="contact-us__form" action="#">
+            <div class="contact-us__input" title="Click on Name">
+                <label class="contact-us__label" for="name">Name</label>
+                <input class="contact-us__input-item" type="text" id="name" placeholder="Ivan Ivanov">
             </div>
-            <div class="inputs-row-two">
-                <div class="contact-us-input" title="Click on Phone">
-                    <label class="input-label" for="phone">Phone</label>
-                    <input class="contact-us-input-phone" type="text" id="phone">
+            <div class="contact-us__row">
+                <div class="contact-us__input" title="Click on Phone">
+                    <label class="contact-us__label" for="phone">Phone</label>
+                    <input class="contact-us__input-phone" type="text" id="phone">
                 </div>
-                <div class="contact-us-input-email" title="Click on Email">
-                    <label class="input-label" for="email">Email</label>
-                    <input class="contact-us-input-email-input" type="text" id="email">
+                <div class="contact-us__email" title="Click on Email">
+                    <label class="contact-us__label" for="email">Email</label>
+                    <input class="contact-us__email-input" type="text" id="email">
                 </div>
             </div>
-            <div class="contact-us-input" title="Click on Message">
-                <label class="input-label" for="message">Message</label>
-                <textarea class="contact-us-input-item textarea" id="message"></textarea>
+            <div class="contact-us__input" title="Click on Message">
+                <label class="contact-us__label" for="message">Message</label>
+                <textarea class="contact-us__input-item contact-us__textarea" id="message"></textarea>
             </div>
-            <div class="checkbox-block">
-                <input class="contact-us-checkbox-input visibility-hidden" type="checkbox" id='contact-us-approval'>
-                <label class="contact-us-label-checkbox" for="contact-us-approval" title="Press"><span
-                        class="contact-us-chackbox-text">By clicking on the button, you consent
+            <div class="contact-us__checkbox">
+                <div class="checkbox">
+                <input class="checkbox__input visibility-hidden" type="checkbox" id='contact-us-approval'>
+                <label class="checkbox__label" for="contact-us-approval" title="Press"><span
+                        class="checkbox__text">By clicking on the button, you consent
                         to the processing of your personal data</span></label>
             </div>
+        </div>
             @@include("button/index.html", {
-            "class": "button form-button-submit",
+            "class": "button contact-us__submit",
             "type": "submit",
             "title": "SUBMIT",
             "title-link": "Press submit"
             })
         </form>
-        <div class="contact-us-text-block">
-            <p class="contact-us-text-1">Our support team are on-hand to assist with any issues you are experiencing.
+        <div class="text">
+            <p>Our support team are on-hand to assist with any issues you are experiencing.
             </p>
-            <p class="contact-us-text-2">Please use the form to contact us with your needs. Send us a message and we'll
+            <p>Please use the form to contact us with your needs. Send us a message and we'll
                 respond as soon as possible.</p>
-            <p class="contact-us-text-bottom">AN EXPERT IS WAITING TO HELP YOU!</p>
+            <h2>AN EXPERT IS WAITING TO HELP YOU!</h2>
         </div>
     </main>
     @@include('footer/index.html')
