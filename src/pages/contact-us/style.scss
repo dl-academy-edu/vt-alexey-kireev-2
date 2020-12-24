@@ -2,7 +2,7 @@
   padding-left: 110px;
   padding-right: 110px;
 
-  h1 {
+  &__title {
     word-spacing: 13px;
     margin-top: 18px;
     font-family: "Montserrat", "Arial", sans-serif;
@@ -12,28 +12,29 @@
     color: #1e0606;
   }
 
-  &__list {
+  &__breadcrumbs {
     display: flex;
   }
 
-  &__link,
-  &__link-disabled {
+  &__link {
     font-family: "Crimson Text", "Arial", sans-serif;
     font-style: italic;
     font-size: 20px;
     line-height: 25px;
     color: #1e0606;
 
+    transition: opacity .4s linear;
+
     &:hover {
+      opacity: 0.5;
+    }
+
+    &_disabled {
+      pointer-events: none;
       opacity: 0.5;
     }
   }
 
-  &__link-disabled {
-    cursor: default;
-    pointer-events: none;
-    opacity: 0.5;
-  }
 
   &__item {
     &::after {
@@ -43,7 +44,7 @@
   }
 }
 
-.text {
+.text-content {
   padding-left: 120px;
 
   p {
@@ -54,7 +55,7 @@
     margin-bottom: 20px;
   }
 
-  h2 {
+  span {
     font-family: "Montserrat", "Arial", sans-serif;
     font-weight: bold;
     font-size: 26px;
@@ -82,12 +83,7 @@
     height: 40px;
   }
 
-  &__textarea {
-    max-width: 600px;
-    height: 150px;
-  }
-
-  &__input-item {
+  &__input {
     padding: 11px 20px 11px;
     display: block;
     width: 100%;
@@ -103,33 +99,39 @@
       line-height: 25px;
       color: #1e0606;
     }
+
+    &_email,
+    &_phone {
+      width: 290px;
+      height: 50px;
+      padding: 14px 20px 11px;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+      background-color: #ffffff;
+      font-size: 18px;
+      line-height: 25px;
+      color: #1e0606;
+    }
+
+    &:hover {
+      border: 2px solid rgba(0, 0, 0, 0.3);
+    }
+
+    &_textarea {
+      max-width: 600px;
+      height: 150px;
+    }  
   }
 
-  &__email {
+&__item {
+
+  &_email {
     margin-left: 20px;
   }
+}
 
   &__row {
     display: flex;
-  }
-
-  &__email-input,
-  &__input-phone {
-    width: 290px;
-    height: 50px;
-    padding: 14px 20px 11px;
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    background-color: #ffffff;
-    font-size: 18px;
-    line-height: 25px;
-    color: #1e0606;
-  }
-
-  &__input-phone:hover,
-  &__email-input:hover,
-  &__input-item:hover {
-    border: 2px solid rgba(0, 0, 0, 0.3);
   }
 
   &__label {

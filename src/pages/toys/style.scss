@@ -11,39 +11,33 @@
     color: #1e0606;
   }
 
-  &__list {
+  &__breadcrumbs {
     display: flex;
   }
 
-  &__link,
-  &__link-disabled {
+  &__link {
     font-family: "Crimson Text", "Arial", sans-serif;
     font-style: italic;
     font-size: 20px;
     line-height: 25px;
     color: #1e0606;
-  }
 
-  &__link-disabled {
-    pointer-events: none;
-    opacity: 0.5;
-  }
+    transition: opacity 0.4s linear;
 
+    &_disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
   &__item::after {
     content: url(/static/images/Vector-Stroke.png);
     padding-left: 17px;
     padding-right: 20px;
   }
-
-  &__link:hover {
-    opacity: 0.5;
-  }
-}
-
-.toys-block-filter {
-  padding-left: 110px;
-  padding-right: 195px;
-  display: flex;
 }
 
 .filter {
@@ -65,17 +59,12 @@
   }
 }
 
-.item-filter-coast-number {
-  display: inline-block;
-  padding-top: 15px;
-}
-
 .coast {
   width: 206px;
   margin-right: 96px;
   display: flex;
 
-  h3 {
+  &__title {
     font-weight: bold;
     font-size: 16px;
     line-height: 22px;
@@ -109,12 +98,14 @@
     background-image: url(/static/images/range.png);
   }
 
-  span {
+  &__start {
     font-style: normal;
     font-weight: normal;
   }
 
   &__end {
+    font-style: normal;
+    font-weight: normal;
     margin: 0px -11px;
     float: right;
   }
@@ -123,7 +114,7 @@
 .color {
   margin-right: 157px;
 
-  h3 {
+  &__title {
     font-weight: bold;
     font-size: 16px;
     line-height: 22px;
@@ -204,7 +195,7 @@
 .delivery {
   margin-right: 68px;
 
-  h3 {
+  &__title {
     font-weight: bold;
     font-size: 16px;
     line-height: 22px;
@@ -256,7 +247,7 @@
 .amount {
   margin-right: 7px;
 
-  h3 {
+  &__title {
     font-weight: bold;
     font-size: 16px;
     line-height: 22px;
@@ -289,6 +280,8 @@
     padding: 0px 15px;
     line-height: 34px;
 
+    transition: background-color 0.4s linear;
+
     &:hover {
       background-color: #eddeeb;
       opacity: 0.7;
@@ -319,18 +312,22 @@
   }
 }
 
-.page {
+.pagination {
   padding-left: 103px;
   padding-right: 103px;
   justify-content: space-between;
   align-items: center;
   display: flex;
 
-  &__vector {
+  &__btv {
     border: none;
     background-color: transparent;
     margin-top: -42px;
     cursor: pointer;
+
+    &:focus path {
+      stroke: #c29974;
+    }
 
     &:hover path {
       stroke: #c29974;
@@ -351,8 +348,7 @@
     padding-right: 53px;
   }
 
-  &__number,
-  &__number-active {
+  &__page {
     border: none;
     background-color: transparent;
     font-family: "Montserrat", "Arial", sans-serif;
@@ -360,18 +356,22 @@
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
-  }
-
-  &__number {
     cursor: pointer;
     color: #1e0606;
+
+    transition: opacity 0.4s linear;
+
+    &:focus {
+      opacity: 0.5;
+    }
 
     &:hover {
       opacity: 0.5;
     }
-  }
 
-  &__number-active {
-    color: #c29974;
+    &_current {
+      pointer-events: none;
+      color: #c29974;
+    }
   }
 }

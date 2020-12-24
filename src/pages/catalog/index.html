@@ -14,21 +14,21 @@
 <body>
     @@include('header/index.html')
     <div class="navigation container">
-        <h1>CATEGORY PRODUCTS</h1>
+        <h1 class="navigation__title">CATEGORY PRODUCTS</h1>
         <div class="navigation__content">
-            <ul class="navigation__list">
+            <ul class="navigation__breadcrumbs">
                 <li class="navigation__item">
                     <a class="navigation__link" href="/" title="Home">Home</a>
                 </li>
                 <li>
-                    <div class="navigation__link-disabled">Catalog</div>
+                    <div class="navigation__link navigation__link_disabled" tabindex="1">Catalog</div>
                 </li>
             </ul>
         </div>
     </div>
     <main class="catalog container">
         <article class="catalog__contect">
-            <ul class="grid-list">
+            <ul class="catalog__list grid-list">
                 <li class="grid-list__item">
                     @@include("category-card/index.html", {
                     "title": "APPAREL KIDS",
@@ -74,8 +74,9 @@
             </ul>
         </article>
     </main>
-    <section class="description container">
-        <h2>Product Description</h2>
+    <section class="catalog__description description container">
+        <h2 class="description__title">Product Description</h2>
+        <div class="description__text-content text-content">
         <p>Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and
             almost really cry. You can even
             bathe her, just like a little sister.</p>
@@ -86,6 +87,7 @@
             for water, a pair of hairpins
             and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.
         </p>
+    </div>
     </section>
     @@include('footer/index.html')
 </body>

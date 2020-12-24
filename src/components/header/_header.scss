@@ -3,7 +3,9 @@
   display: flex;
   align-items: center;
 
+  
   &__logo {
+    transition:  opacity $duration linear;
     &:hover {
       opacity: 0.8;
     }
@@ -29,6 +31,7 @@
     text-transform: uppercase;
     color: #1e0606;
 
+    transition: opacity $duration linear;
     &:hover {
       opacity: 0.8;
     }
@@ -46,6 +49,7 @@
 
     margin-left: auto;
 
+    transition: opacity $duration linear;
     &:hover {
       opacity: 0.8;
     }
@@ -65,6 +69,7 @@
     margin-left: 20px;
     margin-right: 2px;
 
+    transition: opacity $duration linear;
     &:hover {
       opacity: 0.8;
     }

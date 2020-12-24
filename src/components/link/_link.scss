@@ -16,6 +16,7 @@
     justify-content: center;
     align-items: center;
 
+    transition: background-color $duration linear;
    &:hover {
       background-color: #c29974;
     }

@@ -3,7 +3,6 @@
 
   display: flex;
   border: none;
-
   text-transform: uppercase;
   font-weight: bold;
   font-size: 16px;
@@ -16,15 +15,18 @@
   justify-content: center;
   align-items: center;
 
+  transition: background-color $duration linear;
   &:hover {
     background-color: #c29974;
   }
 
   &:active {
+
     background-color: #cfaf91;
   }
 
   &:disabled {
+    user-select: none;
     background-color: #c1c1c1;
     color: #e1e1e1;
   }

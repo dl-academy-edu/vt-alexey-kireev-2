@@ -12,7 +12,7 @@
     color: #818181;
   }
 
-  h2 {
+  &__title {
     cursor: pointer;
     padding-bottom: 19px;
     font-family: "Montserrat", "Arial", sans-serif;
@@ -28,7 +28,7 @@
     text-decoration-color: #000000;
   }
 
-  p {
+  &__description {
     font-size: 18px;
     line-height: 25px;
     color: #1e0606;

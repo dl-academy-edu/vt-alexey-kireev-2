@@ -47,6 +47,7 @@
     line-height: 22px;
     color: #ffffff;
 
+    transition: opacity $duration linear;
     &:hover {
       opacity: 0.5;
     }
@@ -108,6 +109,7 @@
 
     background-repeat: no-repeat;
 
+    transition: opacity $duration linear;
     &:hover {
       opacity: 0.4;
     }
@@ -136,7 +138,6 @@
 .footer-bottom {
   max-width: 1180px;
   max-height: 355px;
-
   margin: 23px auto 0px auto;
 
   &::before {
@@ -147,9 +148,19 @@
     height: 1px;
     background-color: #666666;
   }
+
+  &__content {
+    display: flex;
+  }
+
+  &__rating {
+    padding-right: 26px;
+    color: #ffffff;  
+  }
+
   &__web-desing,
   &__copyright,
-  &__title {
+  &__rating {
     display: flex;
 
     font-size: 16px;
@@ -159,7 +170,7 @@
   }
 
   &__copyright {
-    padding-left: 155px;
+    padding-left: 156px;
     color: #ffffff;
   }
 
@@ -170,51 +181,45 @@
 
     color: #a2a2a2;
 
+    transition: color $duration linear;
+
     &:hover,
     &:active {
       text-decoration-line: underline;
       color: #ffffff;
     }
+
+  }
+}
+
+.rating {
+ display: inline-block;
+ direction: rtl; 
+ margin-top: 3px;
+}
+  .rating__label::before{
+    content: url(static/Images/Star.svg);
+    margin-left: 1.7px;
+   
+    cursor: pointer;
   }
 
-  .rating {
-    display: flex;
+  .rating__input{
+    position: absolute;
+    opacity: 0;
+    left: -9999px;
 
-    &__title {
-      padding-right: 25px;
-      color: #ffffff;
-    }
-    &__input {
-      direction: rtl;
-      margin-top: 3px;
-    }
-    &__input:not(:checked) > input {
-      position: absolute;
-
-      opacity: 0;
-      left: -9999px;
-    }
-    &__input:not(:checked) > label {
-      margin-left: 1.7px;
-      cursor: pointer;
-    }
-    &__input:not(:checked) > label:before {
-      content: url(static/Images/Star.svg);
-    }
-    &__input > input:checked ~ label {
-      content: url(static/Images/Star-hover.svg);
-    }
-    &__input:not(:checked) > label:hover,
-    &__input:not(:checked) > label:hover ~ label {
-      content: url(static/Images/Star-active.svg);
-    }
-
-    &__input > label:active {
-      position: relative;
-    }
-
-    &__input input[type="radio"]:focus + label {
+    &:focus + label {
       outline: 1px solid rgb(0, 0, 0);
     }
   }
-}
+  .rating__label:hover:before,
+  .rating__label:hover ~ .rating__label:before
+  {
+    
+    content: url(static/Images/Star-hover.svg);
+  }
+ 
+  .rating__input:checked ~ .rating__label:before {
+    content: url(static/Images/Star-active.svg);
+  }

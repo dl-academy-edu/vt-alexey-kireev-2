@@ -1,0 +1,94 @@
+@keyframes sun {
+  from {
+  }
+  50% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+   transform: translate(50px, 50px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes line {
+  from {
+  }
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(50px, 0px);
+  }
+
+  to {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes mountain {
+  from {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-15px, 0px);
+  }
+  to {
+    transform: translate(0px, 0px);
+  }
+}
+
+
+@keyframes background {
+  from {
+    transform: translate(0px, 0px);
+  }
+  60% {
+    fill: #000;
+  }
+  to {
+    transform: translate(0px, 0px);
+  }
+}
+
+.svg-icon {
+  width: 418px;
+  height: auto;
+  cursor: pointer;
+
+  &:hover {
+    .svg-icon__sun {
+      animation: sun 5s linear infinite;
+    }
+
+    .svg-icon__line {
+      animation: line 5s linear infinite;
+    }
+    .svg-icon__mountain {
+      animation: mountain 5s linear infinite;
+    }
+    .svg-icon__background {
+      animation: background 5s linear infinite;
+    }
+  }
+}
+
+.svg-icon:focus {
+  .svg-icon__sun {
+    animation: sun 5s linear infinite;
+  }
+
+  .svg-icon__line {
+    animation: line 5s linear infinite;
+  }
+  .svg-icon__mountain {
+    animation: mountain 5s linear infinite;
+  }
+  .svg-icon__background {
+    animation: background 5s linear infinite;
+  }
+}

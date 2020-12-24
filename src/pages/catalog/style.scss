@@ -6,7 +6,7 @@
     display: block;
   }
 
-  h1 {
+  &__title {
     margin-top: 22px;
 
     font-family: "Montserrat", "Arial", sans-serif;
@@ -16,13 +16,22 @@
     color: #1e0606;
   }
 
-  &__link,
-  &__link-disabled {
+  &__link{
     font-family: "Crimson Text", "Arial", sans-serif;
     font-style: italic;
     font-size: 20px;
     line-height: 25px;
     color: #1e0606;
+
+    transition: opacity .4s linear;
+
+    &:hover {
+      opacity: 0.5;
+    }
+    &_disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
   }
 
   &__item {
@@ -31,20 +40,13 @@
       padding: 0px 20px;
     }
   }
-  &__list {
+  &__breadcrumbs {
     display: flex;
   }
 
-  &__link {
-    &:hover {
-      opacity: 0.5;
-    }
   }
-  &__link-disabled {
-    pointer-events: none;
-    opacity: 0.5;
-  }
-}
+
+
 
 .catalog {
   padding: 9px 192px 0 98px;
@@ -73,7 +75,7 @@
 .description {
   padding: 32px 410px 41px 310px;
 
-  h2 {
+  &__title {
     padding-bottom: 25px;
     font-family: "Montserrat", "Arial", sans-serif;
     font-size: 38px;
@@ -81,7 +83,9 @@
     text-transform: uppercase;
     color: #1e0606;
   }
+}
 
+.text-content {
   p {
     padding-bottom: 15px;
     font-size: 16px;
@@ -90,3 +94,5 @@
     width: 680px;
   }
 }
+
+
