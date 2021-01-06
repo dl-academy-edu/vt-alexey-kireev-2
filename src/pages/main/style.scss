@@ -321,7 +321,7 @@
 // information
 
 .information {
-  padding: 69px 147px 0px 110px;
+  padding: 69px 147px 9px 110px;
 
   display: flex;
 }
@@ -422,6 +422,9 @@
   &__maps {
     margin-left: 30px;
     margin-top: 20px;
+    min-width:483px;
+    min-height:200px;
+ 
   }
 
   &__description {
@@ -530,7 +533,15 @@
       opacity: 0.4;
     }
   }
-
+    &__close-img {
+      border: none;
+      cursor: pointer;
+      background-color: transparent;
+      position: absolute;
+      left: 100.5%;
+      bottom: 96.5%;
+    }
+  
   &__row {
     display: flex;
   }

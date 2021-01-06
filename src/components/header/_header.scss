@@ -15,6 +15,7 @@
     }
   }
   &__list {
+    flex-wrap: wrap;
     display: flex;
     margin-left: 60px;
   }

@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="/static/fonts/stylesheet.css" />
     <link rel="shortcut icon" href="/static/images/favicon.ico">
     <title>Главная</title>
-</head>
+    <meta name="description" comtent="DLK">
+ </head>
 
 <body>
+
     @@include("header/index.html")
     <main>
         <section class="slider container">
@@ -58,28 +60,32 @@
                 @@include("category-card/index.html", {
                 "title": "APPAREL KIDS",
                 "title-link": "apparel kids",
-                "img": "image-1.jpg"
+                "img": "image-1.jpg",
+                "alt": "name"
                 })
             </li>
                 <li class="grid-list__item">
                 @@include("category-card/index.html", {
                 "title": "HOLIDAY SHOP",
                 "title-link": "holiday shop",
-                "img": "image-2.jpg"
+                "img": "image-2.jpg",
+                "alt": "name"
                 })
             </li>
                 <li class="grid-list__item">
                 @@include("category-card/index.html", {
                 "title": "TOYS",
                 "title-link": "toys",
-                "img": "image-3.jpg"
+                "img": "image-3.jpg",
+                "alt": "name"
                 })
             </li>
                 <li class="grid-list__item">
                 @@include("category-card/index.html", {
                 "title": "ACCESSORIES",
                 "title-link": "accessories",
-                "img": "image-4.jpg"
+                "img": "image-4.jpg",
+                "alt": "name"
                 })
             </li>
             </ul>
@@ -100,7 +106,7 @@
         </div>
         </section>
         <section class="guarantee container">
-            <img class="guarantee__img" src="/static/images/Divelery.jpg" alt="divelery" width="480" height="559">
+            <img class="guarantee__img" src="/static/images/Divelery.jpg" alt="divelery">
             <div class="guarantee__content">
                 <h2 class="guarantee__title">DELIVERY</h2>
                 <ul class="guarantee__list">
@@ -187,7 +193,7 @@
                         shocked that four years have flown by. It's simply magical.</p>
                         <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1875.130544462244!2d-122.418141416845!3d37.77641923463634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1606941756833!5m2!1sru!2sru"
-                        width="483" height="200" frameborder="0" allowfullscreen="" aria-hidden="false" alt="maps"
+                      frameborder="0" allowfullscreen="" aria-hidden="false" alt="maps"
                         class="contacts__maps"></iframe>
                     </div>
         </section>
@@ -197,7 +203,7 @@
         <h2 class="visibility-hidden">Popup contacy us</h2>
         <form class="popup__form" action="#">
             <button type="button" class="popup__close popup__close_js" title="Click on Close">
-                <img src="/static/images/close.png" alt="close"></button>
+                <img class="" src="/static/images/close.png" alt="close"></button>
             <div class="popup__item">
                 <label class="popup__label" for="name">Name</label>
                 <input class="popup__input" type="text" id="name" title="Click on Name">

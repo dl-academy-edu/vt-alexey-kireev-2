@@ -46,6 +46,11 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.audio-fon {
+  display: none;
+}
+
 // Подключение компонентов
 @import "./header/header";
 @import "./footer/footer";

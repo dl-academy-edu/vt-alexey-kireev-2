@@ -1,0 +1,56 @@
+.content {
+    padding-left: 110px;
+    padding-bottom: 57px;
+}
+
+.navigation {
+        margin-top: -3px;
+        margin-bottom: 47px;
+        padding-left: 110px;
+      
+        &__content {
+          display: block;
+        }
+      
+        &__title {
+          margin-top: 22px;
+      
+          font-family: "Montserrat", "Arial", sans-serif;
+          font-size: 36px;
+          line-height: 44px;
+          text-transform: uppercase;
+          color: #1e0606;
+        }
+      
+        &__link {
+          font-family: "Crimson Text", "Arial", sans-serif;
+          font-style: italic;
+          font-size: 20px;
+          line-height: 25px;
+          color: #1e0606;
+          
+          transition: opacity .4s linear;
+
+          &:hover {
+            opacity: 0.5;
+          }
+
+          &_disabled {
+            pointer-events: none;
+            opacity: 0.5;
+          }
+        }
+      
+        &__item {
+          &::after {
+            content: url(/static/images/Vector-Stroke.png);
+            padding: 0px 20px;
+          }
+        }
+        &__breadcrumbs {
+          display: flex;
+          margin-top: 13px;
+        }
+      
+      }
+    
