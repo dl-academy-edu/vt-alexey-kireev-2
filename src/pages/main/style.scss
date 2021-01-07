@@ -431,8 +431,8 @@
   &__maps {
     margin-left: 30px;
     margin-top: 20px;
-    min-width: 483px;
-    min-height: 200px;
+    max-width: 483px;
+    max-height: 200px;
     border: 0;
   }
 
