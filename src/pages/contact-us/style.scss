@@ -38,7 +38,7 @@
 
   &__item {
     &::after {
-      content: url(/static/images/Vector-Stroke.png);
+      content: url(/static/images/vector-stroke.png);
       padding: 0px 20px;
     }
   }
@@ -68,6 +68,7 @@
 .contact-us {
   display: flex;
   padding: 34px 64px 59px 109px;
+  align-items: flex-start;
 
   &__form {
     position: relative;
@@ -197,7 +198,7 @@
       position: absolute;
       left: 3px;
       top: 3px;
-      content: url(/static/images/Vector-contact-us-chack-box.png);
+      content: url(/static/images/vector-contact-us-chack-box.png);
     }
   }
 }

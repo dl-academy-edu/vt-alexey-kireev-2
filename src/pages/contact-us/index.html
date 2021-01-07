@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="/static/fonts/stylesheet.css" />
     <link rel="shortcut icon" href="/static/images/favicon.ico" />
     <title>CONTACT US</title>
-    <meta name="description" comtent="Contact Us">
+    <meta name="description" content="Contact Us" />
+
 </head>
 
 <body>
@@ -18,7 +19,7 @@
         <h1 class="navigation__title">CONTACT US</h1>
         <ul class="navigation__breadcrumbs">
             <li class="navigation__item">
-                <a class="navigation__link" href="/" title="Go to Home">Home</a>
+                <a class="navigation__link" href="/" aria-label="Go to Home" title="Home">Home</a>
             </li>
             <li>
                 <a href="#" class="navigation__link navigation__link_disabled" tabindex="1">Contact Us</a>
@@ -27,35 +28,36 @@
     </div>
     <main class="contact-us container">
         <form class="contact-us__form" action="#">
-            <div class="contact-us__item" title="Click on Name">
+            <div class="contact-us__item">
                 <label class="contact-us__label" for="name">Name</label>
-                <input class="contact-us__input" type="text" id="name" placeholder="Ivan Ivanov">
+                <input class="contact-us__input" type="text" id="name" placeholder="Ivan Ivanov" aria-label="Enter on Name" title="Name">
             </div>
             <div class="contact-us__row">
-                <div class="contact-us__item" title="Click on Phone">
+                <div class="contact-us__item">
                     <label class="contact-us__label" for="phone">Phone</label>
-                    <input class="contact-us__input contact-us__input_phone" type="text" id="phone">
+                    <input class="contact-us__input contact-us__input_phone" type="text" id="phone" aria-label="Enter on Phone" title="Phone">
                 </div>
-                <div class="contact-us__item_email" title="Click on Email">
+                <div class="contact-us__item_email">
                     <label class="contact-us__label" for="email">Email</label>
-                    <input class="contact-us__input contact-us__input_email" type="text" id="email">
+                    <input class="contact-us__input contact-us__input_email" type="text" id="email" aria-label="Enter on Email" title="Email">
                 </div>
             </div>
-            <div class="contact-us__item" title="Click on Message">
+            <div class="contact-us__item">
                 <label class="contact-us__label" for="message">Message</label>
-                <textarea class="contact-us__input contact-us__input_textarea" id="message"></textarea>
+                <textarea class="contact-us__input contact-us__input_textarea" id="message" aria-label="Enter on Message" title="Message"></textarea>
             </div>
             <div class="contact-us__checkbox checkbox">
-                <input class="checkbox__input" type="checkbox" id='contact-us-approval'>
-                <label class="checkbox__label" for="contact-us-approval" title="Press"><span
-                        class="checkbox__text">By clicking on the button, you consent
+                <input class="checkbox__input" type="checkbox" id='contact-us-approval' aria-label="Enter on Rules" title="Rules">
+                <label class="checkbox__label" for="contact-us-approval"><span class="checkbox__text">By
+                        clicking on the button, you consent
                         to the processing of your personal data</span></label>
-        </div>
+            </div>
             @@include("button/index.html", {
             "class": "button contact-us__submit",
             "type": "submit",
             "title": "SUBMIT",
-            "title-link": "Press submit"
+            "title-link": "Submit",
+            "aria-label": "Press submit"
             })
         </form>
         <div class="contact-us__text-content text-content">

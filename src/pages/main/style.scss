@@ -1,8 +1,9 @@
 // slider
 
 .slider {
-  max-width: 1180px;
-  max-height: 500px;
+  width: 1180px;
+  min-height: 500px;
+  align-items: flex-start;
 
   &__item {
     margin-left: 42px;
@@ -81,7 +82,7 @@
     background-color: #c29974;
   }
 
- &__text {
+  &__text {
     color: #ffffff;
 
     font-weight: bold;
@@ -214,6 +215,7 @@
 .guarantee {
   padding: 53px 210px 0px 110px;
   display: flex;
+  align-items: flex-start;
 
   &__content {
     padding-left: 120px;
@@ -269,6 +271,10 @@
       font-weight: bold;
     }
 
+    &:focus {
+      font-weight: bold;
+    }
+
     &_active {
       position: relative;
 
@@ -299,20 +305,23 @@
 // partners
 
 .parters {
-  flex-wrap: wrap;
   padding: 73px 110px 0px;
 
   &__list {
     display: flex;
-
+    flex-wrap: wrap;
     min-width: 1400px;
   }
   &__item {
     padding-right: 127px;
+    padding-bottom: 30px;
   }
   &__link {
     transition: opacity 0.4s linear;
     &:hover {
+      opacity: 0.75;
+    }
+    &:focus {
       opacity: 0.75;
     }
   }
@@ -321,9 +330,9 @@
 // information
 
 .information {
-  padding: 69px 147px 9px 110px;
-
+  padding: 36px 147px 0px 110px;
   display: flex;
+  align-items: flex-start;
 }
 
 .about-us {
@@ -346,7 +355,7 @@
     z-index: -1;
   }
 
-&__title {
+  &__title {
     margin-bottom: 10px;
     padding-left: 30px;
 
@@ -390,7 +399,7 @@
 
 .contacts {
   width: 543px;
- position: relative;
+  position: relative;
   margin-left: 57px;
   margin-bottom: 52px;
 
@@ -422,9 +431,9 @@
   &__maps {
     margin-left: 30px;
     margin-top: 20px;
-    min-width:483px;
-    min-height:200px;
- 
+    min-width: 483px;
+    min-height: 200px;
+    border: 0;
   }
 
   &__description {
@@ -437,7 +446,6 @@
     line-height: 22px;
     color: #1e0606;
   }
-
 }
 
 // popup
@@ -522,8 +530,8 @@
     cursor: pointer;
     background-color: transparent;
     position: absolute;
-    left: 100.5%;
-    bottom: 96.5%;
+    right: -30px;
+    top: 0;
 
     :hover {
       opacity: 0.6;
@@ -533,30 +541,29 @@
       opacity: 0.4;
     }
   }
-    &__close-img {
-      border: none;
-      cursor: pointer;
-      background-color: transparent;
-      position: absolute;
-      left: 100.5%;
-      bottom: 96.5%;
-    }
-  
+  &__close-img {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    position: absolute;
+    left: 100.5%;
+    bottom: 96.5%;
+  }
+
   &__row {
     display: flex;
   }
 
-&__item {
-  &_email {
-    margin-left: 23px;
-  }
+  &__item {
+    &_email {
+      margin-left: 23px;
+    }
 
-  &_textarea {
-    max-width: 600px;
-    height: 150px;
+    &_textarea {
+      max-width: 600px;
+      height: 150px;
+    }
   }
-
-}
 }
 
 .checkbox {
@@ -611,7 +618,7 @@
       position: absolute;
       left: 3px;
       top: 3px;
-      content: url(/static/images/Vector-contact-us-chack-box.png);
+      content: url(/static/images/vector-contact-us-chack-box.png);
     }
   }
 }

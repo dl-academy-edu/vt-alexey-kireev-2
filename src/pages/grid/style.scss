@@ -37,7 +37,7 @@
 
   &__item {
     &::after {
-      content: url(/static/images/Vector-Stroke.png);
+      content: url(/static/images/vector-stroke.png);
       padding: 0px 17px;
     }
   }
@@ -49,7 +49,7 @@
 
 .grid {
   display: grid;
-  height: 1550px;
+  min-height: 1508px;
   grid-template-areas: "";
   grid-template-rows: repeat(7, 1fr);
   grid-template-columns: repeat(12, 1fr);
@@ -108,14 +108,9 @@
 }
 
 .one {
-  display: block;
-
-  &__content {
-    display: flex;
-    min-height: 500px;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+position: relative;
+align-items: center;
 
   &__title,
   &__description,
@@ -126,8 +121,8 @@
 
   &__inner {
     display: block;
-    padding-left: 80px;
-    padding-bottom: 7px;
+    width: 230px;
+    margin: 40px 0px 50px 80px;
   }
 
   &__title {
@@ -160,7 +155,9 @@
   }
 
   &__img {
-    padding: 85px 80px 0px 71px;
+    position: absolute;
+    bottom: 0;
+    right: 80px;
   }
 }
 
@@ -170,8 +167,7 @@
   text-align: center;
 
   &__content {
-    margin-right: 125px;
-    margin-left: 120px;
+    margin: 0px 120px 55px 120px;
   }
 
   &__title,
@@ -183,7 +179,6 @@
 
   &__text {
     top: 15px;
-
     font-weight: bold;
     font-size: 12px;
     line-height: 14px;
@@ -192,7 +187,6 @@
 
   &__title {
     top: 33px;
-
     font-weight: bold;
     font-size: 48px;
     line-height: 58px;
@@ -202,7 +196,6 @@
 
   &__link {
     top: 42px;
-
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
@@ -224,7 +217,7 @@
 
   &__content {
     display: block;
-    margin-top: -40px;
+    margin-top: -25px;
   }
 
   &__title,
@@ -263,9 +256,11 @@
 .four {
   display: flex;
   align-items: center;
+position: relative;
 
   &__content {
     display: flex;
+    padding-bottom: 50px;
   }
 
   &__title,
@@ -279,8 +274,8 @@
 
   &__inner {
     width: 356px;
-    height: 100%;
     display: block;
+    padding-bottom: 150px;
   }
 
   &__inner-2 {
@@ -301,7 +296,9 @@
   }
 
   &__img {
-    top: 93px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   &__title {
     top: 25px;
@@ -348,6 +345,7 @@
   &__content {
     display: block;
     position: relative;
+    top:14px;
   }
 
   &__subtext,
@@ -470,6 +468,7 @@
   align-items: center;
   text-align: center;
   justify-content: center;
+  position: relative;
 
   &__text,
   &__img,
@@ -480,7 +479,9 @@
   }
 
   &__img {
-    top: 70px;
+    position: absolute;
+    left: 0;
+   bottom: 0;
   }
 
   &__text {
@@ -536,7 +537,7 @@
   }
 
   &__title {
-    top: -11px;
+    top: -4px;
 
     font-weight: 500;
     font-size: 22px;
@@ -546,7 +547,7 @@
   }
 
   &__link {
-    top: 6px;
+    top: 14px;
 
     font-weight: bold;
     font-size: 12px;
@@ -568,8 +569,7 @@
 
   &__content {
     display: block;
-    margin-right: 115px;
-    margin-left: 115px;
+    margin: -8px 115px 0px 115px;
   }
 
   &__link {
@@ -607,8 +607,7 @@
   }
 
   &__title {
-    top: 5px;
-    right: 17px;
+    right: 14px;
 
     text-align: left;
     max-width: 189px;

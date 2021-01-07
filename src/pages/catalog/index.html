@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="/static/fonts/stylesheet.css" />
     <link rel="shortcut icon" href="/static/images/favicon.ico">
     <title>CATALOG</title>
-    <meta name="description" comtent="Catalog">
+    <meta name="description" content="Catalog" />
+
 </head>
 
 <body>
@@ -19,7 +20,7 @@
         <div class="navigation__content">
             <ul class="navigation__breadcrumbs">
                 <li class="navigation__item">
-                    <a class="navigation__link" href="/" title="Home">Home</a>
+                    <a class="navigation__link" href="/" aria-label="Go to Home" title="Home">Home</a>
                 </li>
                 <li>
                     <div class="navigation__link navigation__link_disabled" tabindex="1">Catalog</div>
@@ -34,48 +35,54 @@
                     @@include("category-card/index.html", {
                     "title": "APPAREL KIDS",
                     "title-link": "apparel kids",
+                    "aria-label": "Go to APPAREL KIDS",
                     "img": "image-1.jpg",
-                    "alt": "name"
+                    "alt": "APPAREL KIDS"
                     })
                 </li>
                 <li class="grid-list__item">
                     @@include("category-card/index.html", {
                     "title": "HOLIDAY SHOP",
                     "title-link": "holiday shop",
+                    "aria-label": "Go to HOLIDAY SHOP",
                     "img": "image-2.jpg",
-                    "alt": "name"
+                    "alt": "HOLIDAY SHOP"
                     })
                 </li>
                 <li class="grid-list__item">
                     @@include("category-card/index.html", {
                     "title": "TOYS",
                     "title-link": "toys",
+                    "aria-label": "Go to TOYS",
                     "img": "image-3.jpg",
-                    "alt": "name"
+                    "alt": "TOYS"
                     })
                 </li>
                 <li class="grid-list__item">
                     @@include("category-card/index.html", {
                     "title": "ACCESSORIES",
                     "title-link": "accessories",
+                    "aria-label": "Go to ACCESSORIES",
                     "img": "image-4.jpg",
-                    "alt": "name"
+                    "alt": "ACCESSORIES"
                     })
                 </li>
                 <li class="grid-list__item">
                     @@include("category-card/index.html", {
                     "title": "SALE",
                     "title-link": "sale",
+                    "aria-label": "Go to SALE",
                     "img": "image-5.jpg",
-                    "alt": "name"
+                    "alt": "SALE"
                     })
                 </li>
                 <li class="grid-list__item">
                     @@include("category-card/index.html", {
-                    "title": "apparel adults",
+                    "title": "APPAREL ADULTS",
                     "title-link": "apparel adults",
+                    "aria-label": "Go to APPAREL ADULTS",
                     "img": "image-6.jpg",
-                    "alt": "name"
+                    "alt": "APPAREL ADULTS"
                     })
                 </li>
             </ul>

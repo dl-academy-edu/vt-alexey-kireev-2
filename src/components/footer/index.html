@@ -6,23 +6,23 @@
             <h2>Navigation</h2>
             <ul class="footer-navigation__list">
                 <li class="footer-navigation__items">
-                    <a class="footer-navigation__link" href="#" title="Go to About Us">About Us</a>
+                    <a class="footer-navigation__link" href="#" aria-label="Go to About Us" title="About Us">About Us</a>
                 </li>
                 <li class="footer-navigation__items">
-                    <a class="footer-navigation__link" href="/pages/blog" title="Go to Blog">Blog</a>
+                    <a class="footer-navigation__link" href="/pages/blog" aria-label="Go to Blog" title="Blog">Blog</a>
                 </li>
                 <li class="footer-navigation__items">
-                    <a class="footer-navigation__link" href="#" title="Go to Design Services">Design Services</a>
+                    <a class="footer-navigation__link" href="#" aria-label="Go to Design Services" title="Design Services">Design Services</a>
                 </li>
                 <li class="footer-navigation__items">
-                    <a class="footer-navigation__link" href="#" title="Go to Featured On">Featured On</a>
+                    <a class="footer-navigation__link" href="#" aria-label="Go to Featured On" title="Featured On">Featured On</a>
                 </li>
                 <li class="footer-navigation__items">
-                    <a class="footer-navigation__link" href="#" title="Go to 2018 Holiday Catalog">2018 Holiday
+                    <a class="footer-navigation__link" href="#" aria-label="Go to 2018 Holiday Catalog" title="2018 Holiday Catalog">2018 Holiday
                         Catalog</a>
                 </li>
                 <li class="footer-navigation__items">
-                    <a class="footer-navigation__link" href="#" title="Go to Shop By Designer">Shop By Designer</a>
+                    <a class="footer-navigation__link" href="#" aria-label="Go to Shop By Designer" title="Shop By Designer">Shop By Designer</a>
                 </li>
             </ul>
         </section>
@@ -31,58 +31,59 @@
             <h2>Customer Information</h2>
             <ul class="footer-navigation__list">
                 <li class="footer-navigation__items">
-                    <a class="footer-navigation__link" href="/pages/contact-us" title="Go toContact Us">Contact Us</a>
+                    <a class="footer-navigation__link" href="/pages/contact-us" aria-label="Go to Contact Us" title="Contact Us">Contact Us</a>
                 </li>
                 <li class="footer-navigation__items">
-                    <a class="footer-navigation__link" href="#" title="Go to Sale Exclusions">Sale Exclusions</a>
+                    <a class="footer-navigation__link" href="#" aria-label="Go to Sale Exclusions" title="Sale Exclusions">Sale Exclusions</a>
                 </li>
                 <li class="footer-navigation__items">
-                    <a class="footer-navigation__link" href="#" title="Go to Shipping & Returns">Shipping &
+                    <a class="footer-navigation__link" href="#" aria-label="Go to Shipping & Returns" title="Shipping & Returns">Shipping &
                         Returns</a>
                 </li>
                 <li class="footer-navigation__items">
-                    <a class="footer-navigation__link" href="#" title="Go toTerms & Conditions">Terms &
+                    <a class="footer-navigation__link" href="#" aria-label="Go to Terms & Conditions" title="Terms & Conditions">Terms &
                         Conditions</a>
                 </li>
                 <li class="footer-navigation__items">
-                    <a class="footer-navigation__link" href="#" title="Go toPrivacy Policy">Privacy Policy</a>
+                    <a class="footer-navigation__link" href="#" aria-label="Go to Privacy Policy" title="Privacy Policy">Privacy Policy</a>
                 </li>
                 <li class="footer-navigation__items">
-                    <a class="footer-navigation__link" href="#" title="Go to Search">Search</a>
+                    <a class="footer-navigation__link" href="#" aria-label="Go to Search" title="Search">Search</a>
                 </li>
             </ul>
         </section>
         <section class="footer-navigation">
             <h2>Connect</h2>
             <form class="footer-navigation__form" action="#">
-                <input class="footer-navigation__email" type="text" placeholder="Email" title="Email">
+                <input class="footer-navigation__email" type="text" placeholder="Email" aria-label="Enter Email" title="Email">
                 @@include("button/index.html", {
                     "class": "button footer-navigation__button",
                     "type": "submit",
                     "title": "JOIN",
-                    "title-link": "Press join"
+                    "title-link": "Join",
+                    "aria-label": "Press join"
                     })
             </form>
             <div class="social-network">
                 <ul class="social-network__list">
                     <li class="social-network__item">
-                        <a href="#" class="social-network__link facebook" title="Go to Facebook">
+                        <a href="#" class="social-network__link facebook" aria-label="Go to Facebook" title="Facebook">
                             <span class="visibility-hidden">Follow to Facebook</span>
                         </a>
                     </li>
                     <li class="social-network__item">
-                        <a href="#" class="social-network__link twitter" title="Go to Twitter">
+                        <a href="#" class="social-network__link twitter" aria-label="Go to Twitter" title="Go to Twitter">
                             <span class="visibility-hidden">Follow to Twitter</span>
                         </a>
                     </li>
                     <li class="social-network__item">
-                        <a href="#" class="social-network__link pinterest" title="Go to Painerest">
+                        <a href="#" class="social-network__link pinterest" aria-label="Go to Painerest" title="Painerest">
                             <span class="visibility-hidden" title="Painerest">Follow to Painerest</span>
                         </a>
                     </li>
                     <li class="social-network__item">
                         <a href="#" class="social-network__link instagram">
-                            <span class="visibility-hidden" title="Go to Instagram">Follow to Instagram</span>
+                            <span class="visibility-hidden" aria-label="Go to Instagram" title="Instagram">Follow to Instagram</span>
                         </a>
                     </li>
                 </ul>
@@ -95,20 +96,20 @@
         <div class="footer-bottom__content">
         <p class="footer-bottom__rating">Company Rating</p>
             <div class="rating">
-                <input class="rating__input" type="radio" name="rating" id="stars-5" value="5">
-                    <label class="rating__label" for="stars-5" title="Give a rating of 5"></label>
+                    <input class="rating__input" type="radio" name="rating" id="stars-5" value="5">
+                    <label class="rating__label" for="stars-5" aria-label="Give a rating of 5" title="Rating of 5"></label>
                     <input class="rating__input" type="radio" name="rating" id="stars-4" value="4">
-                    <label class="rating__label" for="stars-4" title="Give a rating of 4"></label>
+                    <label class="rating__label" for="stars-4" aria-label="Give a rating of 4" title="Rating of 4"></label>
                     <input class="rating__input" type="radio" name="rating" id="stars-3" value="3">
-                    <label class="rating__label" for="stars-3" title="Give a rating of 3"></label>
+                    <label class="rating__label" for="stars-3" aria-label="Give a rating of 3" title="Rating of 3"></label>
                     <input class="rating__input" type="radio" name="rating" id="stars-2" value="2">
-                    <label class="rating__label" for="stars-2" title="Give a rating of 2"></label>
+                    <label class="rating__label" for="stars-2" aria-label="Give a rating of 2" title="Rating of 2"></label>
                     <input class="rating__input" type="radio" name="rating" id="stars-1" value="1">
-                    <label class="rating__label" for="stars-1" title="Give a rating of 1"></label>
+                    <label class="rating__label" for="stars-1" aria-label="Give a rating of 1" title="Rating of 1"></label>
             </div>
             <p class="footer-bottom__copyright">Copyright © 2018 Dlk • Design Life Kids</p>
-            <a href="/" class="footer-bottom__web-desing" title="Go to Direct Line">
-                <span>Web Design — Direct Line Development</span>
+            <a href="/" class="footer-bottom__web-desing" aria-label="Go to Direct Line" title="Direct Line">
+               Web Design — Direct Line Development
             </a>
         </div>
     </div>

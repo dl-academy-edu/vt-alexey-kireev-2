@@ -42,19 +42,6 @@
   }
 }
 
-
-@keyframes background {
-  from {
-    transform: translate(0px, 0px);
-  }
-  60% {
-    fill: #000;
-  }
-  to {
-    transform: translate(0px, 0px);
-  }
-}
-
 .svg-icon {
   width: 418px;
   height: auto;
@@ -71,9 +58,6 @@
     .svg-icon__mountain {
       animation: mountain 5s linear infinite;
     }
-    .svg-icon__background {
-      animation: background 5s linear infinite;
-    }
   }
 }
 
@@ -87,8 +71,5 @@
   }
   .svg-icon__mountain {
     animation: mountain 5s linear infinite;
-  }
-  .svg-icon__background {
-    animation: background 5s linear infinite;
   }
 }

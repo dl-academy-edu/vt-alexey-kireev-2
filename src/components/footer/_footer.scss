@@ -6,8 +6,8 @@
     margin-right: auto;
     margin-left: auto;
 
-    max-width: 1180px;
-    max-height: 355px;
+    width: 1180px;
+    min-height: 355px;
 
     display: flex;
   }
@@ -112,20 +112,23 @@
     &:hover {
       opacity: 0.4;
     }
+    &:focus {
+      opacity: 0.4;
+    }
     &:active {
       opacity: 0.2;
     }
 
     &:link.facebook {
-      background-image: url(static/images/social/Facebook.svg);
+      background-image: url(static/images/social/facebook.svg);
     }
 
     &:link.twitter {
-      background-image: url(static/images/social/Twitter.svg);
+      background-image: url(static/images/social/twitter.svg);
     }
 
     &:link.pinterest {
-      background-image: url(static/images/social/Pinterest.svg);
+      background-image: url(static/images/social/pinterest.svg);
     }
 
     &:link.instagram {
@@ -160,7 +163,6 @@
   &__web-desing,
   &__copyright,
   &__rating {
-    display: flex;
 
     font-size: 16px;
     line-height: 22px;
@@ -183,7 +185,7 @@
     transition: color $duration linear;
 
     &:hover,
-    &:active {
+    &:active,&:focus {
       text-decoration-line: underline;
       color: #ffffff;
     }
@@ -195,9 +197,10 @@
  display: inline-block;
  direction: rtl; 
  margin-top: 3px;
+
 }
   .rating__label::before{
-    content: url(static/Images/Star.svg);
+    content: url(static/images/star.svg);
     margin-left: 1.7px;
    
     cursor: pointer;
@@ -212,13 +215,13 @@
       outline: 1px solid rgb(0, 0, 0);
     }
   }
-  .rating__label:hover:before,
+  .rating__label:hover:before, 
   .rating__label:hover ~ .rating__label:before
   {
     
-    content: url(static/Images/Star-hover.svg);
+    content: url(static/images/star-hover.svg);
   }
  
   .rating__input:checked ~ .rating__label:before {
-    content: url(static/Images/Star-active.svg);
+    content: url(static/images/star-active.svg);
   }

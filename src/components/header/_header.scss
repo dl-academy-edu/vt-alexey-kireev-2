@@ -10,6 +10,10 @@
       opacity: 0.8;
     }
 
+    &:focus {
+      opacity: 0.8;
+    }
+
     &:active {
       opacity: 0.4;
     }
@@ -37,6 +41,10 @@
       opacity: 0.8;
     }
 
+    &:focus {
+      opacity: 0.8;
+    }
+
     &:active {
       opacity: 0.4;
     }
@@ -52,6 +60,10 @@
 
     transition: opacity $duration linear;
     &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
       opacity: 0.8;
     }
 
@@ -72,6 +84,10 @@
 
     transition: opacity $duration linear;
     &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
       opacity: 0.8;
     }
 
