@@ -1,4 +1,7 @@
 .category-card {
+  max-width: 280px;
+  max-height: 270px;
+
   &__img {
     position: absolute;
     z-index: -1;

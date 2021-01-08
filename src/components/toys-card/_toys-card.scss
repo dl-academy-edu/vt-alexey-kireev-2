@@ -13,6 +13,8 @@
   }
 
   &__price {
+    padding-bottom: 28px;
+
     font-weight: bold;
     font-size: 16px;
     line-height: 22px;
@@ -20,34 +22,35 @@
     color: #1e0606;
   }
 
-  &__link:hover::after {
-    content: "LEARN MORE";
-    width: 207px;
-    height: 207px;
-    display: flex;
-    position: absolute;
-    background-color: #e5eaf8;
-    left: 90px;
-    bottom: 0;
-    right: 0;
-    top: 90px;
-    opacity: 0.9;
-  
-    /* Текст */
+  &__link {
+    &:hover::after {
+      content: "LEARN MORE";
+      width: 207px;
+      height: 207px;
+      display: flex;
+      position: absolute;
+      background-color: #e5eaf8;
+      left: 90px;
+      bottom: 0;
+      right: 0;
+      top: 90px;
+      opacity: 0.9;
 
-    font-family: "Montserrat", "Arial", sans-serif;
-    font-weight: bold;
-    font-size: 26px;
-    line-height: 29px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    color: #1e0606;
-    text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
+      /* Текст */
 
-  }
+      font-family: "Montserrat", "Arial", sans-serif;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 29px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      color: #1e0606;
+      text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
+    }
 
-  &__link:active::after {
-    opacity: 0.67;
+    &:active::after {
+      opacity: 0.67;
+    }
   }
 }

@@ -51,6 +51,8 @@ img {
   display: none;
 }
 
+@import "./grid";
+
 // Подключение компонентов
 @import "./header/header";
 @import "./footer/footer";

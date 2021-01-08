@@ -39,28 +39,28 @@
                 <span class="coast__start">0</span>
                 <span class="coast__end">500</span>
             </div>
-            <div class="filter__color color">
-                <h3 class="color__title">Color</h3>
-                <ul class="color__list">
-                    <li class="color__item">
-                        <input class="color__input" type="checkbox" id="black" aria-label="Enter on Black" title="Black">
-                        <label class="color__label" for="black"><span
-                                class="color__text">Black</span></label>
+            <div class="filter__colors colors">
+                <h3 class="colors__title">Color</h3>
+                <ul class="colors__list">
+                    <li class="colors__item">
+                        <input class="colors__input" type="checkbox" id="black" aria-label="Enter on Black" title="Black">
+                        <label class="colors__label" for="black"><span
+                                class="colors__text">Black</span></label>
                     </li>
-                    <li class="color__item">
-                        <input class="color__input" type="checkbox" id="blue" aria-label="Enter on Blue" title="Blue" checked>
-                        <label class="color__label" for="blue"><span
-                                class="color__text">Blue</span></label>
+                    <li class="colors__item">
+                        <input class="colors__input" type="checkbox" id="blue" aria-label="Enter on Blue" title="Blue" checked>
+                        <label class="colors__label" for="blue"><span
+                                class="colors__text">Blue</span></label>
                     </li>
-                    <li class="color__item">
-                        <input class="color__input" type="checkbox" id="green" aria-label="Enter on Green" title="Green" checked>
-                        <label class="color__label" for="green"><span
-                                class="color__text">Green</span></label>
+                    <li class="colors__item">
+                        <input class="colors__input" type="checkbox" id="green" aria-label="Enter on Green" title="Green" checked>
+                        <label class="colors__label" for="green"><span
+                                class="colors__text">Green</span></label>
                     </li>
-                    <li class="color__item">
-                        <input class="color__input" type="checkbox" id="white" aria-label="Enter on White" title="White" checked>
-                        <label class="color__label" for="white"><span
-                                class="color__text">White</span></label>
+                    <li class="colors__item">
+                        <input class="colors__input" type="checkbox" id="white" aria-label="Enter on White" title="White" checked>
+                        <label class="colors__label" for="white"><span
+                                class="colors__text">White</span></label>
                     </li>
                 </ul>
             </div>
@@ -104,9 +104,8 @@
         </form>
     </div>
     <main class="toys container">
-        <article class="toys__content">
-            <ul class="toys__list grid-list">
-                <li class="grid-list__item">
+            <ul class="row">
+                <li class="col-6 col-md-4">
                     @@include("toys-card/index.html", {
                     "text": "SHARKY BEAN BAG CHAIR COVER",
                     "price": "60.00",
@@ -115,7 +114,7 @@
                     "link": "#"
                     })
                 </li>
-                <li class="grid-list__item">
+                <li class="col-6 col-md-4">
                     @@include("toys-card/index.html", {
                     "text": "BRASS DECO FRAMES",
                     "price": "66.00",
@@ -124,7 +123,7 @@
                     "link": "#"
                     })
                 </li>
-                <li class="grid-list__item">
+                <li class="col-6 col-md-4">
                     @@include("toys-card/index.html", {
                     "text": "CIBO FULL APRON",
                     "price": "60.00",
@@ -133,7 +132,7 @@
                     "link": "#"
                     })
                 </li>
-                <li class="grid-list__item">
+                <li class="col-6 col-md-4">
                     @@include("toys-card/index.html", {
                     "text": "GATCHA GATCHA GUMBALL MACHINE",
                     "price": "56.00",
@@ -142,7 +141,7 @@
                     "link": "#"
                     })
                 </li>
-                <li class="grid-list__item">
+                <li class="col-6 col-md-4">
                     @@include("toys-card/index.html", {
                     "text": "CHRISTMAS ADVENT SCENTED CANDLE",
                     "price": "29.00",
@@ -151,7 +150,7 @@
                     "link": "#"
                     })
                 </li>
-                <li class="grid-list__item">
+                <li class="col-6 col-md-4">
                     @@include("toys-card/index.html", {
                     "text": "TANGLE SPINNING TEA LIGHT",
                     "price": "56.00",
@@ -161,7 +160,7 @@
                     })
                 </li>
             </ul>
-        </article>
+    
     </main>
     <div class="pagination container">
         <button type="button" class="pagination__btv pagination__btv_prev" aria-label="Press prev" title="Prev">

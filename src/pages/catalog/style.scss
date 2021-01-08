@@ -46,34 +46,16 @@
 
   }
 
-
-
 .catalog {
-  padding: 9px 192px 0 98px;
-
+  padding-top: 16px;
+  max-width: 1180px;
   &__contect {
-    display: table;
-  }
-}
-
-.grid-list {
-  justify-content: start;
-  display: flex;
-  flex-wrap: wrap;
-
-  &__item {
-    overflow: hidden;
-    width: 27%;
-    padding: 10px;
-
-    &:nth-child(6n + 4) {
-      margin-left: 200px;
-    }
+    display: block;
   }
 }
 
 .description {
-  padding: 32px 410px 41px 310px;
+  padding: 48px 410px 41px 310px;
 
   &__title {
     padding-bottom: 25px;

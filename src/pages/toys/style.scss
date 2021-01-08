@@ -71,7 +71,7 @@
   }
 
   &__range {
-    margin: 12px 0px 10px 6px;
+    margin: 14px 0 13px 6px;
   }
 
   &__input {
@@ -105,12 +105,11 @@
   &__end {
     font-style: normal;
     font-weight: normal;
-    margin: 0px -11px;
     float: right;
   }
 }
 
-.color {
+.colors {
   margin-right: 157px;
 
   &__title {
@@ -304,7 +303,7 @@
 }
 
 .toys {
-  padding: 43px 90px 0px 110px;
+  padding: 42px 110px 0 110px;
 
   &__content {
     display: block;
@@ -321,7 +320,7 @@
   &__btv {
     border: none;
     background-color: transparent;
-    margin-top: -42px;
+    margin-top: -22px;
     cursor: pointer;
 
     &:focus path {
@@ -339,7 +338,7 @@
 
   &__list {
     display: flex;
-    padding: 0px 18px 0px 65px;
+    padding: 22px 13px 0 65px;
   }
 
   &__item {

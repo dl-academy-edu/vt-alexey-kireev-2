@@ -1,0 +1,74 @@
+$columncount: 12;
+$gap: 20px;
+
+  @for $i from 1 through $columncount {
+    .col-#{$i} {
+      width: (100% / 12) * $i;
+    }
+  
+    .add-#{$i} {
+      margin-right: (100% / 12) * $i;
+    }
+  
+    .skip-#{$i} {
+      margin-left: (100% / 12) * $i;
+    }
+  }
+  @for $i from 1 through $columncount {
+    @include media-interval($sm, 0) {
+      .col-md-#{$i} {
+        width: (100% / 12) * $i;
+      }
+  
+      .add-md-#{$i} {
+        margin-right: (100% / 12) * $i;
+      }
+  
+      .skip-md-#{$i} {
+        margin-left: (100% / 12) * $i;
+      }
+    }
+  }
+  @for $i from 1 through $columncount {
+    @include media-interval($lg, 0) {
+      .col-xl-#{$i} {
+        width: (100% / 12) * $i;
+      }
+  
+      .add-xl-#{$i} {
+        margin-right: (100% / 12) * $i;
+      }
+  
+      .skip-xl-#{$i} {
+        margin-left: (100% / 12) * $i;
+      }
+    }
+  }
+
+  @for $i from 1 through $columncount {
+    .card:nth-child(6n+4)  {
+  margin-left:200px;
+    }
+  }
+  
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -($gap/2);
+  margin-right: -($gap/2);
+  margin-bottom: -($gap/2);
+}
+
+.col {
+  max-width: 100%;
+  flex-grow: 1; 
+  width: 0;
+}
+
+
+[class|=col] {
+  padding-bottom: $gap;
+  padding-left: $gap/2;
+  padding-right: $gap/2;
+}
+

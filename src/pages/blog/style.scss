@@ -47,24 +47,12 @@
   padding-right: 110px;
 
   &__content {
-    width: 1250px;
     padding-top: 15px;
   }
 }
 
-.grid-list {
-  flex-wrap: wrap;
-  display: flex;
-
-  &__item {
-    overflow: hidden;
-    width: 32%;
-    padding-bottom: 34px;
-  }
-}
-
 .pagination {
-  padding: 0 104px 42px 103px;
+  padding: 24px 104px 43px 101px;
   justify-content: space-between;
   align-items: center;
   display: flex;

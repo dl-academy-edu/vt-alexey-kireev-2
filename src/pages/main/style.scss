@@ -137,23 +137,10 @@
 
 // category-products
 
-.grid-list {
-  justify-content: space-between;
-  display: flex;
-  flex-wrap: wrap;
-  margin: -10px -4px -9px -2px;
-
-  &__item {
-    overflow: hidden;
-    width: 25%;
-    padding: 10px;
-  }
-}
-
 .category {
   min-width: 1180px;
   min-height: 421px;
-  padding: 89px 103px 39px 103px;
+  padding: 90px 110px 34px;
 
   &__title {
     margin-bottom: 30px;
@@ -170,6 +157,7 @@
 
 .navigation {
   display: flex;
+  padding-top: 23px;
 
   &__btv {
     cursor: pointer;
@@ -179,10 +167,8 @@
 
     width: 37px;
     height: 37px;
-
-    margin-left: 6px;
-    padding-left: 7px;
-    margin-top: 34px;
+    
+    margin-left: 4px;
 
     transition: stroke 0.14s linear;
 
@@ -205,8 +191,7 @@
 
     width: 580px;
 
-    padding-top: 31px;
-    padding-left: 22px;
+    padding-left: 18px;
   }
 }
 
@@ -240,7 +225,7 @@
   &__list {
     position: relative;
 
-    bottom: 21px;
+    bottom: 17px;
 
     width: 326px;
 
@@ -295,7 +280,7 @@
 
   .text-content {
     p {
-      margin: -29px 0px 44px;
+      margin: -27px 0px 44px;
       font-size: 16px;
       line-height: 22px;
       color: #1e0606;
@@ -330,7 +315,7 @@
 // information
 
 .information {
-  padding: 36px 147px 0px 110px;
+  padding: 43px 147px 0px 110px;
   display: flex;
   align-items: flex-start;
 }
@@ -350,7 +335,6 @@
     left: 0;
     right: 0;
     top: 26px;
-    bottom: 12px;
 
     z-index: -1;
   }
@@ -386,9 +370,9 @@
   }
 
   &__description {
-    width: 500px;
+    max-width: 500px;
 
-    padding-top: 10px;
+    padding-top: 7px;
     padding-left: 30px;
 
     font-size: 16px;
