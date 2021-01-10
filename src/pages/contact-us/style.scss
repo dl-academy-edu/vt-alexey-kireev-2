@@ -105,7 +105,6 @@
     &_phone {
       width: 290px;
       height: 50px;
-      padding: 14px 20px 11px;
       border: 2px solid rgba(0, 0, 0, 0.2);
       box-sizing: border-box;
       background-color: #ffffff;
@@ -175,11 +174,17 @@
 
     font-size: 14px;
     line-height: 19px;
+
   }
 
   &__label {
     cursor: pointer;
     position: absolute;
+
+    &:hover {
+      text-decoration: underline;
+      color: #000000;
+    }
 
     &::before {
       margin-top: 3px;
@@ -191,6 +196,7 @@
       border: 2px solid #c29974;
       box-sizing: border-box;
       border-radius: 3px;
+      
     }
 
     &::after {

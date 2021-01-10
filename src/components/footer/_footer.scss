@@ -186,7 +186,7 @@
 
     &:hover,
     &:active,&:focus {
-      text-decoration-line: underline;
+      text-decoration: underline;
       color: #ffffff;
     }
 
@@ -194,7 +194,9 @@
 }
 
 .rating {
- display: inline-block;
+  cursor: pointer;
+ 
+  display: inline-block;
  direction: rtl; 
  margin-top: 3px;
 
@@ -202,7 +204,7 @@
   .rating__label::before{
     content: url(static/images/star.svg);
     margin-left: 1.7px;
-   
+
     cursor: pointer;
   }
 

@@ -167,7 +167,7 @@
 
     width: 37px;
     height: 37px;
-    
+
     margin-left: 4px;
 
     transition: stroke 0.14s linear;
@@ -191,6 +191,7 @@
 
     width: 580px;
 
+    margin-top: -3px;
     padding-left: 18px;
   }
 }
@@ -207,7 +208,7 @@
   }
 
   &__title {
-    padding-top: 30px;
+    padding-top: 31px;
 
     font-family: "Montserrat", "Arial", sans-serif;
     font-size: 38px;
@@ -280,6 +281,7 @@
 
   .text-content {
     p {
+      max-width: 480px;
       margin: -27px 0px 44px;
       font-size: 16px;
       line-height: 22px;
@@ -335,7 +337,8 @@
     left: 0;
     right: 0;
     top: 26px;
-
+    bottom: 0;
+    
     z-index: -1;
   }
 
@@ -493,7 +496,6 @@
     &_phone {
       width: 290px;
       height: 50px;
-      padding: 14px 20px 11px;
       border: 2px solid rgba(0, 0, 0, 0.2);
       box-sizing: border-box;
       background-color: #ffffff;
@@ -579,11 +581,17 @@
     font-family: "Roboto", "Arial", sans-serif;
     font-size: 14px;
     line-height: 19px;
+
   }
 
   &__label {
     cursor: pointer;
     position: absolute;
+
+    &:hover {
+      text-decoration: underline;
+      color: #000000;
+    }
 
     &::before {
       margin-top: 3px;

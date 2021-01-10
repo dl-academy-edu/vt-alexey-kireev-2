@@ -26,8 +26,8 @@
   &__link:hover,
   &__link:active {
     cursor: pointer;
-    text-decoration-line: underline;
-    text-decoration-color: #000000;
+    text-decoration: underline;
+    color: #000000;
   }
 
   &__description {

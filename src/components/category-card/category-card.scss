@@ -1,6 +1,7 @@
 .category-card {
   max-width: 280px;
   max-height: 270px;
+ display: flex;
 
   &__img {
     position: absolute;
@@ -8,9 +9,11 @@
   }
 
   &__title {
+    display: flex;
     overflow: hidden;
 
-    width: 190px;
+    max-width: 190px;
+    margin: auto;
 
     font-family: "Montserrat", "Arial", sans-serif;
     font-size: 26px;
@@ -18,8 +21,10 @@
     text-transform: uppercase;
     color: #ffffff;
     text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
-
     text-align: center;
+
+    align-items: center;
+    justify-content: center;
   }
 
   &__link {
@@ -27,16 +32,13 @@
 
     display: flex;
 
-    align-items: center;
-    justify-content: center;
-
     min-width: 280px;
     min-height: 270px;
 
     &:hover,
     &:active {
-      text-decoration-line: underline;
-      text-decoration-color: #ffffff;
+      text-decoration: underline;
+      color: #ffffff;
     }
   }
 }
