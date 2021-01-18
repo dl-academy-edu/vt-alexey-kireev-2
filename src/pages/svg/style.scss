@@ -1,56 +1,84 @@
+@import "./../../components/vars";
+
 .content {
-    padding-left: 110px;
-    padding-bottom: 57px;
+  padding-bottom: 57px;
+
+  @media screen and (max-width: $sm) {
+    padding-bottom: 15px;
+  }
 }
 
 .navigation {
-        margin-top: -3px;
-        margin-bottom: 47px;
-        padding-left: 110px;
-      
-        &__content {
-          display: block;
-        }
-      
-        &__title {
-          margin-top: 22px;
-      
-          font-family: "Montserrat", "Arial", sans-serif;
-          font-size: 36px;
-          line-height: 44px;
-          text-transform: uppercase;
-          color: #1e0606;
-        }
-      
-        &__link {
-          font-family: "Crimson Text", "Arial", sans-serif;
-          font-style: italic;
-          font-size: 20px;
-          line-height: 25px;
-          color: #1e0606;
-          
-          transition: opacity .4s linear;
+  margin-top: -3px;
+  margin-bottom: 47px;
 
-          &:hover {
-            opacity: 0.5;
-          }
+  @media screen and (max-width: $sm) {
+    margin-bottom: 10px;
+  }
 
-          &_disabled {
-            pointer-events: none;
-            opacity: 0.5;
-          }
-        }
-      
-        &__item {
-          &::after {
-            content: url(/static/images/vector-stroke.png);
-            padding: 0px 20px;
-          }
-        }
-        &__breadcrumbs {
-          display: flex;
-          margin-top: 13px;
-        }
-      
+  &__content {
+    display: block;
+  }
+
+  &__title {
+    margin-top: 22px;
+
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 36px;
+    line-height: 44px;
+    text-transform: uppercase;
+    color: #1e0606;
+
+    @media screen and (max-width: 768px) {
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @media screen and (max-width: 375px) {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &__link {
+    font-family: "Crimson Text", "Arial", sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+    color: #1e0606;
+
+    transition: opacity 0.4s linear;
+
+
+    @media screen and (max-width: 375px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &_disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+
+  &__item {
+    &::after {
+      content: url(/static/images/vector-stroke.svg);
+      padding: 0px 18px;
+
+      @media screen and (max-width: $sm) {
+        content: url(/static/images/vector-stroke-mobile.svg);
+        padding: 0px 12px;
       }
-    
+    }
+  }
+  &__breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 13px;
+  }
+}

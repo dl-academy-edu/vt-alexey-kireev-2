@@ -1,34 +1,68 @@
 .footer {
-  padding: 0px 110px 100px 110px;
   background: #434343;
+  padding: 100px 110px 100px 110px;
+
+  @media screen and (max-width: $md) {
+    padding: 80px 40px 80px 40px;
+  }
+
+  @media screen and (max-width: $sm) {
+    padding: 70px 20px 70px 20px;
+  }
 
   &__content {
-    margin-right: auto;
-    margin-left: auto;
-
-    width: 1180px;
-    min-height: 355px;
-
+    margin-left: 20px;
     display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: $sm) {
+      display: block;
+      margin: auto;
+    }
   }
 }
 .footer-navigation {
-  min-width: 380px;
-  min-height: 281px;
+  max-width: 380px;
+  width: 100%;
   margin-right: 20px;
+
+  @media screen and (max-width: $md) {
+    max-width: 202px;
+  }
+
+  @media screen and (max-width: $sm) {
+    padding-bottom: 13px;
+    max-width: 100%;
+    display: block;
+    margin-right: 0px;
+
+    &:nth-child(3) {
+      margin-top: 19px;
+    }
+  }
+
+  &__list {
+    @media screen and (max-width: $sm) {
+      column-count: 2;
+    }
+  }
 
   &__items {
     margin-bottom: 15px;
   }
 
   h2 {
-    padding-top: 100px;
     padding-bottom: 12px;
 
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
     color: #aaaaaa;
+
+    @media screen and (max-width: $sm) {
+      padding-top: 0;
+      padding-bottom: 4px;
+    }
 
     &::after {
       content: "";
@@ -40,6 +74,10 @@
       height: 1px;
 
       background-color: #666666;
+
+      @media screen and (max-width: $sm) {
+        margin-top: 20px;
+      }
     }
   }
   &__link {
@@ -48,6 +86,12 @@
     color: #ffffff;
 
     transition: opacity $duration linear;
+
+    @media screen and (max-width: $sm) {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
     &:hover {
       opacity: 0.5;
     }
@@ -59,6 +103,10 @@
   &__form {
     display: flex;
     margin-top: 12px;
+
+    @media screen and (max-width: $sm) {
+      margin-top: 23px;
+    }
   }
 
   &__email {
@@ -69,11 +117,19 @@
     font-size: 16px;
     line-height: 22px;
 
-    width: 302px;
-    height: 40px;
+    max-width: 380px;
+    width: 100%;
 
     color: #ebebeb;
     background-color: #666666;
+
+    @media screen and (max-width: $md) {
+      max-width: 125px;
+    }
+
+    @media screen and (max-width: $sm) {
+      max-width: 263px;
+    }
 
     &::placeholder {
       display: flex;
@@ -87,6 +143,11 @@
   &__button {
     width: 81px;
     height: 40px;
+
+    @media screen and (max-width: $sm) {
+      width: 72px;
+      height: 38px;
+    }
   }
 }
 
@@ -94,10 +155,22 @@
   &__list {
     display: flex;
     margin-top: 24px;
+
+    @media screen and (max-width: $md) {
+      margin-top: 27px;
+    }
+
+    @media screen and (max-width: $sm) {
+      margin-top: 20px;
+    }
   }
 
   &__item {
     margin-right: 10px;
+
+    @media screen and (max-width: $sm) {
+      margin-right: 13px;
+    }
   }
 
   &__link {
@@ -109,6 +182,7 @@
     background-repeat: no-repeat;
 
     transition: opacity $duration linear;
+
     &:hover {
       opacity: 0.4;
     }
@@ -138,9 +212,16 @@
 }
 
 .footer-bottom {
-  max-width: 1180px;
-  max-height: 355px;
+  max-width: 1200px;
   margin: 23px auto 0px auto;
+
+  @media screen and (max-width: $md) {
+    margin: 36px 20px 0;
+  }
+
+  @media screen and (max-width: $sm) {
+    margin: auto;
+  }
 
   &::before {
     margin-top: -12px;
@@ -149,21 +230,35 @@
     display: block;
     height: 1px;
     background-color: #666666;
+
+    @media screen and (max-width: $sm) {
+      margin-top: 29px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__rating-inner {
+    display: flex;
   }
 
   &__content {
     display: flex;
+    margin-left: 10px;
+
+    @media screen and (max-width: $md) {
+      display: block;
+      margin-left: 0px;
+    }
   }
 
   &__rating {
     padding-right: 26px;
-    color: #ffffff;  
+    color: #ffffff;
   }
 
   &__web-desing,
   &__copyright,
   &__rating {
-
     font-size: 16px;
     line-height: 22px;
 
@@ -173,6 +268,22 @@
   &__copyright {
     padding-left: 156px;
     color: #ffffff;
+
+    @media screen and (max-width: $md) {
+      padding: 15px 43px 15px 0px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+
+    @media screen and (max-width: $md) {
+      display: flex;
+    }
+
+    @media screen and (max-width: $sm) {
+      display: block;
+    }
   }
 
   &__web-desing {
@@ -185,45 +296,51 @@
     transition: color $duration linear;
 
     &:hover,
-    &:active,&:focus {
+    &:active,
+    &:focus {
       text-decoration: underline;
       color: #ffffff;
     }
 
+    @media screen and (max-width: $md) {
+      margin-top: 15px;
+      margin-left: 0;
+    }
+
+    @media screen and (max-width: $sm) {
+      margin: 0px;
+    }
   }
 }
 
 .rating {
   cursor: pointer;
- 
+
   display: inline-block;
- direction: rtl; 
- margin-top: 3px;
-
+  direction: rtl;
+  margin-top: 3px;
 }
-  .rating__label::before{
-    content: url(static/images/star.svg);
-    margin-left: 1.7px;
+.rating__label::before {
+  content: url(static/images/star.svg);
+  margin-left: 1.7px;
 
-    cursor: pointer;
-  }
+  cursor: pointer;
+}
 
-  .rating__input{
-    position: absolute;
-    opacity: 0;
-    left: -9999px;
+.rating__input {
+  position: absolute;
+  opacity: 0;
+  left: -9999px;
 
-    &:focus + label {
-      outline: 1px solid rgb(0, 0, 0);
-    }
+  &:focus + label {
+    outline: 1px solid rgb(0, 0, 0);
   }
-  .rating__label:hover:before, 
-  .rating__label:hover ~ .rating__label:before
-  {
-    
-    content: url(static/images/star-hover.svg);
-  }
- 
-  .rating__input:checked ~ .rating__label:before {
-    content: url(static/images/star-active.svg);
-  }
+}
+.rating__label:hover:before,
+.rating__label:hover ~ .rating__label:before {
+  content: url(static/images/star-hover.svg);
+}
+
+.rating__input:checked ~ .rating__label:before {
+  content: url(static/images/star-active.svg);
+}

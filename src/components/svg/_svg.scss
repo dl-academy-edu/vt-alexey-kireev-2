@@ -1,10 +1,9 @@
 @keyframes sun {
   from {
     transform: translate(0px, 0px);
-
   }
   50% {
-   transform: translate(50px, 50px);
+    transform: translate(50px, 50px);
   }
 
   to {
@@ -39,11 +38,11 @@
 
 .svg-icon {
   max-width: 418px;
-
+  width: 100%;
   cursor: pointer;
 
   &:hover {
-    .svg-icon__sun{
+    .svg-icon__sun {
       animation: sun 5s linear infinite;
     }
 
@@ -53,19 +52,18 @@
     .svg-icon__mountain {
       animation: mountain 5s linear infinite;
     }
-  
 
-  &:focus {
-  .svg-icon__sun {
-    animation: sun 5s linear infinite;
-  }
+    &:focus {
+      .svg-icon__sun {
+        animation: sun 5s linear infinite;
+      }
 
-  .svg-icon__line {
-    animation: line 5s linear infinite;
+      .svg-icon__line {
+        animation: line 5s linear infinite;
+      }
+      .svg-icon__mountain {
+        animation: mountain 5s linear infinite;
+      }
+    }
   }
-  .svg-icon__mountain {
-    animation: mountain 5s linear infinite;
-  }
-  }
-}
 }

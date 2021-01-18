@@ -1,3 +1,47 @@
+@keyframes girl-chat {
+  from {
+    display: none;
+    opacity: 0;
+  }
+  50% {
+    display: block;
+    opacity: 01;
+  }
+  to {
+    display: block;
+    opacity: 0;
+  }
+}
+
+@keyframes ruka {
+  from {
+    transform: translate(0px, -0px) rotate(0deg);
+  }
+
+  to {
+    transform: translate(50px, -50px) rotateY(30deg);
+  }
+}
+
 .svg-animation {
-    width: 100%;
+  width: 100%;
+  position: relative;
+
+  @media screen and (max-width: $md) {
+    max-width: 769px;
+    max-height: 422px;
+  }
+
+  @media screen and (max-width: $sm) {
+    max-width: 375px;
+    max-height: 206px;
+  }
+
+  &__girl-chat {
+    animation: girl-chat 5s linear;
+  }
+  &__men-ruka {
+    animation: ruka 5s linear;
+    transform: translate(350px, -350px) rotate(360deg);
+  }
 }

@@ -1,6 +1,7 @@
+@import "./../../components/vars";
+
 .navigation {
   margin-top: -2px;
-  padding-left: 110px;
 
   &__content {
     display: block;
@@ -14,16 +15,28 @@
     line-height: 49px;
     text-transform: uppercase;
     color: #1e0606;
+
+    @media screen and (max-width: $md) {
+      margin-top: 50px;
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @media screen and (max-width: $sm) {
+      font-size: 24px;
+      line-height: 29px;
+      margin-top: 24px;
+    }
   }
 
-  &__link{
+  &__link {
     font-family: "Crimson Text", "Arial", sans-serif;
     font-style: italic;
     font-size: 20px;
     line-height: 25px;
     color: #1e0606;
 
-    transition: opacity .4s linear;
+    transition: opacity 0.4s linear;
 
     &:hover {
       opacity: 0.5;
@@ -32,30 +45,70 @@
       pointer-events: none;
       opacity: 0.5;
     }
+
+    @media screen and (max-width: $sm) {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   &__item {
     &::after {
-      content: url(/static/images/vector-stroke.png);
-      padding: 0px 20px;
+      content: url(/static/images/vector-stroke.svg);
+      padding: 0px 18px;
+
+      @media screen and (max-width: $sm) {
+        content: url(/static/images/vector-stroke-mobile.svg);
+        padding: 0px 12px;
+      }
     }
   }
   &__breadcrumbs {
     display: flex;
-  }
+    flex-wrap: wrap;
+    
+    @media screen and (max-width: $md) {
+      margin-top: 11px;
+    }
 
+    @media screen and (max-width: $sm) {
+      margin-top: 10px;
+    }
   }
+}
 
 .catalog {
   padding-top: 16px;
-  max-width: 1180px;
+
+  @media screen and (max-width: $md) {
+    padding-top: 1px;
+  }   
+
+  @media screen and (max-width: $sm) {
+    margin-top: -11px;
+    margin-bottom: -22px;
+  }  
+
+
   &__contect {
     display: block;
+
   }
 }
 
 .description {
-  padding: 48px 410px 41px 310px;
+  padding-top: 48px;
+  padding-bottom: 41px;
+  margin: 0 auto;
+  max-width: 780px;
+
+  @media screen and (max-width: $md) {
+    padding: 32px 60px;
+  }
+
+  @media screen and (max-width: $sm) {
+    padding: 39px 20px 32px;
+  }
 
   &__title {
     padding-bottom: 25px;
@@ -64,17 +117,30 @@
     line-height: 46px;
     text-transform: uppercase;
     color: #1e0606;
+
+    @media screen and (max-width: $md) {
+      padding-bottom: 20px;
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @media screen and (max-width: $sm) {
+      padding-bottom: 15px;
+      font-size: 24px;
+      line-height: 29px;
+    }
   }
 }
 
 .text-content {
+  @media screen and (max-width: $sm) {
+    max-width: 335px;
+  }
   p {
     padding-bottom: 15px;
     font-size: 16px;
     line-height: 22px;
     color: #1e0606;
-    width: 680px;
+    max-width: 680px;
   }
 }
-
-

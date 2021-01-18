@@ -1,16 +1,21 @@
 .category-card {
-  max-width: 280px;
-  max-height: 270px;
- display: flex;
+  overflow: hidden;
+  position: relative;
 
   &__img {
     position: absolute;
-    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    width: 100.5%;
+    height: 100.5%;
+    max-width: initial;
   }
 
   &__title {
     display: flex;
-    overflow: hidden;
 
     max-width: 190px;
     margin: auto;
@@ -25,20 +30,41 @@
 
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: $md) {
+      max-width: 156px;
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    @media screen and (max-width: $sm) {
+      max-width: 123px;
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   &__link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
     cursor: pointer;
 
     display: flex;
 
-    min-width: 280px;
-    min-height: 270px;
+    width: 100.5%;
+    height: 100.5%;
 
     &:hover,
     &:active {
       text-decoration: underline;
       color: #ffffff;
     }
+  }
+
+  &__img-wrapper {
+    position: relative;
+    padding-top: 96%;
+    background-color: #a7a7a7;
   }
 }

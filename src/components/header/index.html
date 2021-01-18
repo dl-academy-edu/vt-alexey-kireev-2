@@ -1,6 +1,15 @@
 <header class="header container">
-    <audio class="audio-fon" controls src="/static/images/fon.mp" loop autoplay></audio>
-    <a href="/" class="header__logo"><img src="/static/images/logo.png" alt="Site logo" aria-label="Go to Home" title="Home" width="100" height="52"></a>
+    <audio class="audio-fon" controls src="/static/images/fon.mp3" loop autoplay></audio>
+    <a href="/" class="header__logo-link" aria-label="Go to Home" title="Home">
+        <picture class="header__logo">
+            <source srcset="/static/images/logo-mobile.png, /static/images/logo-mobile-2x.png 2x"
+                media="(max-width:375px)">
+            <source srcset="/static/images/logo-tablet.png, /static/images/logo-tablet-2x.png 2x"
+                media="(max-width:768px)">
+            <img src="/static/images/logo.png" srcset="/static/images/logo.png, /static/images/logo-2x.png 2x"
+                alt="Site logo" width="100" height="52">
+        </picture>
+    </a>
     <nav aria-label="Навигация по сайту" class="header__nav">
         <ul class="header__list">
             <li class="header__item">
@@ -13,7 +22,8 @@
                 <a href="/pages/blog" class="header__link" aria-label="Go to Blog" title="Blog">Blog</a>
             </li>
             <li class="header__item">
-                <a href="/pages/animation" class="header__link" aria-label="Go to Animation" title="Animation">Animation</a>
+                <a href="/pages/animation" class="header__link" aria-label="Go to Animation"
+                    title="Animation">Animation</a>
             </li>
             <li class="header__item">
                 <a href="/pages/svg" class="header__link" aria-label="Go to Svg" title="Svg">Svg</a>
@@ -23,7 +33,76 @@
             </li>
         </ul>
     </nav>
-    <button class="header__search" type="button"><img src="/static/images/search.png" alt="search"
-        aria-label="Go to Search" title="Search"></button>
-    <a href="/pages/contact-us" class="header__contact-us" aria-label="Go to Contact Us" title="Contact Us">Contact Us</a>
+    <button class="header__mobile-button header__mobile-button_js">
+        MENU
+    </button>
+    <button class="header__search" type="button">
+        <img src="/static/images/search.png" class="header__search-img" alt="search" aria-label="Go to Search"
+            title="Search" width="17" height="17">
+    </button>
+    <a href="/pages/contact-us" class="header__contact-us" aria-label="Go to Contact Us" title="Contact Us">Contact
+        Us</a>
+
+
+    <div class="mobile-header mobile-header_js mobile-header">
+
+
+        <div class="mobile-header__content">
+            <div class="mobile-header__header">
+                <a href="/" class="moblie-header__logo-link" aria-label="Go to Home" title="Home">
+                    <picture class="mobile-header__logo">
+                        <source srcset="/static/images/logo-mobile.png, /static/images/logo-mobile-2x.png 2x"
+                            media="(max-width:526px)">
+                        <img src="/static/images/logo-tablet.png"
+                            srcset="/static/images/logo-tablet.png, /static/images/logo-tablet-2x.png 2x"
+                            alt="Site logo" width="62" height="32">
+                    </picture>
+                </a>
+                <button class="mobile-header__close mobile-header__close_js">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.707105 0L0 0.707105L7.07111 7.77821L4.6869e-05 14.8493L0.707151 15.5564L7.77821 8.48532L14.8492 15.5563L15.5563 14.8492L8.48532 7.77821L15.5563 0.707178L14.8492 7.33696e-05L7.77821 7.07111L0.707105 0Z"
+                            fill="#1E0606" />
+                    </svg>
+                </button>
+                <button class="mobile-header__search" type="button">
+                    <img src="/static/images/search.png" class="mobile-header__search-img" alt="search"
+                        aria-label="Go to Search" title="Search" width="17" height="17">
+                </button>
+            </div>
+            <div class="mobile-header__wrapper">
+                <nav aria-label="Мобильная навигация по сайту" class="mobile-header__nav">
+                    <ul class="mobile-header__list">
+                        <li class="mobile-header__item">
+                            <a href="/pages/catalog" class="mobile-header__link" aria-label="Go to Catalog"
+                                title="Catalog">Catalog</a>
+                        </li>
+                        <li class="mobile-header__item">
+                            <a href="/" class="mobile-header__link" aria-label="Go to About Us" title="About Us">About
+                                Us</a>
+                        </li>
+                        <li class="mobile-header__item">
+                            <a href="/pages/blog" class="mobile-header__link" aria-label="Go to Blog"
+                                title="Blog">Blog</a>
+                        </li>
+                        <li class="mobile-header__item">
+                            <a href="/pages/animation" class="mobile-header__link" aria-label="Go to Animation"
+                                title="Animation">Animation</a>
+                        </li>
+                        <li class="mobile-header__item">
+                            <a href="/pages/svg" class="mobile-header__link" aria-label="Go to Svg" title="Svg">Svg</a>
+                        </li>
+                        <li class="mobile-header__item">
+                            <a href="/pages/grid" class="mobile-header__link" aria-label="Go to Grid"
+                                title="Grid">Grid</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="/pages/contact-us" class="mobile-header__contact-us" aria-label="Go to Contact Us"
+                    title="Contact Us">Contact Us</a>
+
+            </div>
+        </div>
+    </div>
+
 </header>

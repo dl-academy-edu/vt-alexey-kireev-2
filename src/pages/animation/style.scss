@@ -1,69 +1,93 @@
+@import "./../../components/vars";
+
 .content {
-  margin-bottom: 70px;
+  padding-bottom: 65px;
+  max-width: 1621px;
 
-  position: relative;
+  @media screen and (max-width: $md) {
+    padding: 0px 0px 47px 0px;
+  }
 
-  &:before { 
-    content: "";
-    position: absolute;
-    background-image: (url(/static/images/fon.jpg));
-    background-repeat: round;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-
-    z-index: -1;
+  @media screen and (max-width: $sm) {
   }
 }
 
 .navigation {
-        margin-top: -3px;
-        margin-bottom: 50px;
-        padding-left: 110px;
-      
-        &__content {
-          display: block;
-        }
-      
-        &__title {
-          margin-top: 22px;
-      
-          font-family: "Montserrat", "Arial", sans-serif;
-          font-size: 36px;
-          line-height: 44px;
-          text-transform: uppercase;
-          color: #1e0606;
-        }
-      
-        &__link {
-          font-family: "Crimson Text", "Arial", sans-serif;
-          font-style: italic;
-          font-size: 20px;
-          line-height: 25px;
-          color: #1e0606;
-          
-          transition: opacity .4s linear;
+  margin-top: -3px;
+  margin-bottom: 50px;
 
-          &:hover {
-            opacity: 0.5;
-          }
+  @media screen and (max-width: $md) {
+    margin-bottom: 30px;
+  }
 
-          &_disabled {
-            pointer-events: none;
-            opacity: 0.5;
-          }
-        }
-      
-        &__item {
-          &::after {
-            content: url(/static/images/vector-stroke.png);
-            padding: 0px 20px;
-          }
-        }
-        &__breadcrumbs {
-          display: flex;
-          margin-top: 13px;
-        }
-      
+  @media screen and (max-width: $sm) {
+    margin-bottom: 17px;
+  }
+
+  &__content {
+    display: block;
+  }
+
+  &__title {
+    margin-top: 22px;
+
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 36px;
+    line-height: 44px;
+    text-transform: uppercase;
+    color: #1e0606;
+
+    @media screen and (max-width: $md) {
+      font-size: 36px;
+      line-height: 44px;
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width: $sm) {
+      font-size: 24px;
+      line-height: 29px;
+      margin-top: 26px;
+    }
+  }
+
+  &__link {
+    font-family: "Crimson Text", "Arial", sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+    color: #1e0606;
+
+    transition: opacity 0.4s linear;
+
+    @media screen and (max-width: $sm) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &_disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+
+  &__item {
+    &::after {
+      content: url(/static/images/vector-stroke.svg);
+      padding: 0px 18px;
+
+      @media screen and (max-width: $sm) {
+        content: url(/static/images/vector-stroke-mobile.svg);
+        padding: 0 12px;
       }
-    
+    }
+  }
+  &__breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 13px;
+  }
+}

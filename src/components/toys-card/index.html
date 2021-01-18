@@ -1,6 +1,13 @@
 <div class="toys-card">
-<a class="toys-card__link" href="@@link" aria-label="Click on Learn more" title="Learn more">
-        <img src="/static/images/@@img" alt="@@alt" width="385" height="385">
+    <a class="toys-card__link" href="@@link" aria-label="Click on Learn more" title="Learn more">
+        <div class="toys-card__img-wrapper">
+            <picture class="toys-card__img">
+                <source srcset="/static/images/@@imgMobile, /static/images/@@imgMobile2x 2x" media="(max-width:375px)">
+                <source srcset="/static/images/@@imgTablet, /static/images/@@imgTablet2x 2x" media="(max-width:768px)">
+                <img src="/static/images/@@img" srcset="/static/images/@@img, /static/images/@@img2x 2x" alt="@@alt"
+                    width="380" height="385">
+            </picture>
+        </div>
         <h2 class="toys-card__title">@@text</h2>
         <p class="toys-card__price">$@@price USD</p>
     </a>

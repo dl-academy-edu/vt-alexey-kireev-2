@@ -1,7 +1,6 @@
-.navigation {
-  padding-left: 110px;
-  padding-right: 110px;
+@import "./../../components/vars";
 
+.navigation {
   &__title {
     word-spacing: 13px;
     margin-top: 18px;
@@ -10,10 +9,32 @@
     line-height: 49px;
     text-transform: uppercase;
     color: #1e0606;
+
+    @media screen and (max-width: $md) {
+      word-spacing: 0;
+      margin-top: 47px;
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @media screen and (max-width: $sm) {
+      font-size: 24px;
+      line-height: 29px;
+      margin-top: 24px;
+    }
   }
 
   &__breadcrumbs {
     display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: $md) {
+      margin-top: 13px;
+    }
+
+    @media screen and (max-width: $sm) {
+      margin-top: 10px;
+    }
   }
 
   &__link {
@@ -23,7 +44,12 @@
     line-height: 25px;
     color: #1e0606;
 
-    transition: opacity .4s linear;
+    transition: opacity 0.4s linear;
+
+    @media screen and (max-width: $sm) {
+      font-size: 16px;
+      line-height: 20px;
+    }
 
     &:hover {
       opacity: 0.5;
@@ -35,53 +61,135 @@
     }
   }
 
-
   &__item {
     &::after {
-      content: url(/static/images/vector-stroke.png);
-      padding: 0px 20px;
+      content: url(/static/images/vector-stroke.svg);
+      padding: 0px 17px;
+
+      @media screen and (max-width: $sm) {
+        content: url(/static/images/vector-stroke-mobile.svg);
+        padding: 0px 12px;
+      }
     }
   }
 }
 
 .text-content {
-  padding-left: 120px;
+  padding-bottom: 45px;
+  padding-left: 118px;
+
+  @media screen and (max-width: $md) {
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: $sm) {
+    text-align: center;
+  }
 
   p {
-    width: 384px;
+    max-width: 384px;
     font-size: 16px;
     line-height: 22px;
     color: #1e0606;
     margin-bottom: 20px;
+
+    @media screen and (max-width: $md) {
+      max-width: 536px;
+    }
+
+    @media screen and (max-width: $sm) {
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 16px;
+    }
   }
 
-  span {
+  &__text-bold {
     font-family: "Montserrat", "Arial", sans-serif;
     font-weight: bold;
     font-size: 26px;
     line-height: 34px;
     text-transform: uppercase;
     color: #c29974;
+
+    @media screen and (max-width: $md) {
+      max-width: 329px;
+    }
+
+    @media screen and (max-width: $sm) {
+      font-size: 24px;
+      line-height: 34px;
+    }
   }
 }
-
 .contact-us {
+  flex-flow: wrap;
   display: flex;
-  padding: 34px 64px 59px 109px;
+  padding-top: 34px;
+  padding-bottom: 59px;
   align-items: flex-start;
+
+  @media screen and (max-width: $md) {
+    display: block;
+    padding-top: 26px;
+    padding-bottom: 48px;
+  }
+
+  @media screen and (max-width: $sm) {
+    padding-top: 5px;
+  }
+  &__inner {
+    display: flex;
+    @media screen and (max-width: $md) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__text-content {
+    @media screen and (max-width: $md) {
+      order: 1;
+    }
+  }
 
   &__form {
     position: relative;
     padding: 21px 41px 29px;
     background-color: #e5eaf8;
-    max-width: 685px;
+    max-width: 680px;
+    width: 100%;
     min-height: 542px;
+
+    @media screen and (max-width: $md) {
+      order: 2;
+      padding: 21px 56px 30px;
+    }
+
+    @media screen and (max-width: $sm) {
+      order: 2;
+      padding: 10px 23px 30px 25px;
+      margin: -18px 0 -3px;
+    }
   }
 
   &__submit {
     margin-top: -4px;
     width: 106px;
     height: 40px;
+
+    @media screen and (max-width: $md) {
+      margin-top: -2px;
+    }
+
+    @media screen and (max-width: $sm) {
+      width: 98px;
+      height: 38px;
+      font-size: 14px;
+      line-height: 19px;
+      margin-top: -19px;
+      margin-left: 2px;
+    }
   }
 
   &__input {
@@ -95,22 +203,24 @@
     line-height: 25px;
     color: #1e0606;
 
+    @media screen and (max-width: $sm) {
+      padding: 6px 16px;
+    }
+
     &::placeholder {
       font-size: 18px;
       line-height: 25px;
       color: #1e0606;
-    }
 
-    &_email,
-    &_phone {
-      width: 290px;
-      height: 50px;
-      border: 2px solid rgba(0, 0, 0, 0.2);
-      box-sizing: border-box;
-      background-color: #ffffff;
-      font-size: 18px;
-      line-height: 25px;
-      color: #1e0606;
+      @media screen and (max-width: $md) {
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      @media screen and (max-width: $sm) {
+        font-size: 14px;
+        line-height: 16px;
+      }
     }
 
     &:hover {
@@ -120,34 +230,64 @@
     &_textarea {
       max-width: 600px;
       height: 150px;
-    }  
+    }
   }
 
-&__item {
+  &__item {
+    width: 100%;
 
-  &_email {
-    margin-left: 20px;
+    &_email {
+      width: 100%;
+      margin-left: 20px;
+
+      @media screen and (max-width: $sm) {
+        margin-left: 0px;
+      }
+    }
   }
-}
 
   &__row {
+    width: 100%;
     display: flex;
+
+    @media screen and (max-width: $sm) {
+      display: block;
+    }
   }
 
   &__label {
     user-select: none;
     margin-bottom: 4px;
-    display: block;
     margin-top: 20px;
+
+    display: block;
+
     font-size: 14px;
     line-height: 19px;
     color: #1e0606;
+
+    @media screen and (max-width: $md) {
+      margin-bottom: 2px;
+    }
+
+    @media screen and (max-width: $sm) {
+      order: 2;
+      margin: 12px 8px 5px 2px;
+    }
   }
 }
 
 .checkbox {
   display: flex;
-  padding: 17px 0px 44px;
+  padding: 17px 0px 17px;
+
+  @media screen and (max-width: $md) {
+    padding: 20px 0px 17px;
+  }
+
+  @media screen and (max-width: $sm) {
+    padding: 12px 0 7px;
+  }
 
   &__input {
     opacity: 0;
@@ -175,11 +315,21 @@
     font-size: 14px;
     line-height: 19px;
 
+    @media screen and (max-width: $md) {
+      font-family: "Roboto", "Arial", sans-serif;
+    }
+
+    @media screen and (max-width: $sm) {
+      display: inline-flex;
+      max-width: 256px;
+      top: -23px;
+      left: 32px;
+    }
   }
 
   &__label {
     cursor: pointer;
-    position: absolute;
+    position: relative;
 
     &:hover {
       text-decoration: underline;
@@ -196,7 +346,6 @@
       border: 2px solid #c29974;
       box-sizing: border-box;
       border-radius: 3px;
-      
     }
 
     &::after {

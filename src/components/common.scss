@@ -1,4 +1,5 @@
 @import "./vars";
+
 * {
   font-family: "Open Sans", "Montserrat", "Roboto", "Crimson Text", Arial,
     sans-serif;
@@ -30,8 +31,18 @@ p {
 
 .container {
   max-width: 1400px;
+  padding-left: 110px;
+  padding-right: 110px;
   margin-right: auto;
   margin-left: auto;
+  @media screen and (max-width: $md) {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  @media screen and (max-width: $sm) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 
 .visibility-hidden {
@@ -57,6 +68,7 @@ img {
 @import "./header/header";
 @import "./footer/footer";
 @import "./category-card/category-card";
+@import "./category-slider/category-slider";
 @import "./toys-card/toys-card";
 @import "./blog-card/blog-card";
 @import "./button/button";

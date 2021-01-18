@@ -1,25 +1,68 @@
 .toys-card {
-  max-width: 393px;
   position: relative;
 
+  &__img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    width: 100.5%;
+    height: 100.5%;
+    max-width: initial;
+  }
+
+  &__img-wrapper {
+    position: relative;
+    padding-top: 100.5%;
+    background-color: #a7a7a7;
+  }
+
   &__title {
-    padding-top: 29px;
+    padding-top: 35px;
     padding-bottom: 14px;
     font-weight: normal;
     font-size: 14px;
     line-height: 19px;
     text-align: center;
     color: #1e0606;
+
+    @media screen and (max-width: $md) {
+      padding-top: 21px;
+      padding-bottom: 5px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    @media screen and (max-width: $sm) {
+      padding-top: 20px;
+      max-width: 159px;
+      max-height: 33px;
+    }
   }
 
   &__price {
-    padding-bottom: 28px;
+    padding-bottom: 25px;
 
     font-weight: bold;
     font-size: 16px;
     line-height: 22px;
     text-align: center;
     color: #1e0606;
+
+    @media screen and (max-width: $md) {
+      padding-bottom: 20px;
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    @media screen and (max-width: $sm) {
+      padding-top: 23px;
+      padding-bottom: 15px;
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 
   &__link {
@@ -30,10 +73,12 @@
       display: flex;
       position: absolute;
       background-color: #e5eaf8;
-      left: 90px;
+
+      margin: auto;
+      left: 0px;
       bottom: 0;
       right: 0;
-      top: 90px;
+      top: -70px;
       opacity: 0.9;
 
       /* Текст */
@@ -47,6 +92,24 @@
       justify-content: center;
       color: #1e0606;
       text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
+
+      @media screen and (max-width: $md) {
+        top: -112px;
+        max-width: 126px;
+        max-height: 111px;
+
+        font-size: 22px;
+        line-height: 26px;
+      }
+
+      @media screen and (max-width: $sm) {
+        top: -130px;
+        max-width: 98px;
+        max-height: 92px;
+
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
 
     &:active::after {

@@ -1,6 +1,6 @@
-.navigation {
-  padding-left: 110px;
+@import "./../../components/vars";
 
+.navigation {
   &__title {
     margin-top: 18px;
     font-family: "Montserrat", "Arial", sans-serif;
@@ -8,11 +8,32 @@
     line-height: 42px;
     text-transform: uppercase;
     color: #1e0606;
+
+    @media screen and (max-width: $md) {
+      margin-top: 50px;
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @media screen and (max-width: $sm) {
+      margin-top: 24px;
+      font-size: 24px;
+      line-height: 29px;
+    }
   }
 
   &__breadcrumbs {
     display: flex;
-    padding: 9px 8px 0px 0px;
+    flex-wrap: wrap;
+    padding: 8px 8px 0px 0px;
+
+    @media screen and (max-width: $md) {
+      margin-top: 0px;
+    }
+
+    @media screen and (max-width: $sm) {
+      margin-top: 2px;
+    }
   }
 
   &__link {
@@ -22,49 +43,93 @@
     line-height: 25px;
     color: #1e0606;
 
-    transition: opacity .4s linear;
+    transition: opacity 0.4s linear;
 
-  &:hover {
-    opacity: 0.5;
-  }
+    @media screen and (max-width: $sm) {
+      font-size: 16px;
+      line-height: 20px;
+    }
 
-  &_disabled {
-    pointer-events: none;
-    opacity: 0.5;
-  }
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &_disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
   }
   &__item {
     &::after {
-      content: url(/static/images/vector-stroke.png);
-      padding-left: 20px;
-      padding-right: 20px;
+      content: url(/static/images/vector-stroke.svg);
+      padding: 0px 19px;
+
+      @media screen and (max-width: $sm) {
+        content: url(/static/images/vector-stroke-mobile.svg);
+        padding: 0px 12px;
+      }
     }
+
   }
 }
 
 .blog {
-  padding-left: 110px;
-  padding-right: 110px;
-
   &__content {
     padding-top: 15px;
+
+    @media screen and (max-width: $md) {
+      margin-top: -20px;
+    }
+
+    @media screen and (max-width: $sm) {
+      margin-top: -30px;
+    }
   }
 }
 
 .pagination {
-  padding: 24px 104px 43px 101px;
+  padding-top: 25px;
+  padding-bottom: 22px;
   justify-content: space-between;
   align-items: center;
   display: flex;
 
+  @media screen and (max-width: $md) {
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+
+  @media screen and (max-width: $md) {
+    padding-bottom: 35px;
+  }
+
   &__list {
     display: flex;
-    padding: 3px 42px 2px 101px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3px 25px 2px 25px;
+
+    
   }
 
   &__item {
     margin-top: -15px;
-    padding-right: 55px;
+    padding: 0px 27px 20px 27px;
+
+    @media screen and (max-width: 500px) {
+      padding-right: 14px;
+    padding-left: 14px;
+        }
+
+    @media screen and (max-width: $sm) {
+      padding-right: 13px;
+      padding-left: 26px;
+    }
+
+    @media screen and (max-width: 340px) {
+      padding-right: 8px;
+    padding-left: 8px;
+        }
   }
 
   &__page {
@@ -78,7 +143,12 @@
     cursor: pointer;
     color: #1e0606;
 
-    transition: opacity .4s linear;
+    transition: opacity 0.4s linear;
+
+    @media screen and (max-width: $sm) {
+      font-size: 14px;
+      line-height: 17px;
+    }
 
     &:focus {
       opacity: 0.5;
@@ -87,17 +157,24 @@
     &:hover {
       opacity: 0.5;
     }
-    
-  &_current {
-    pointer-events: none;
-    color: #c29974;
+
+    &_current {
+      pointer-events: none;
+      color: #c29974;
+    }
   }
+
+  &__btv-svg {
+    @media screen and (max-width: $sm) {
+      width: 17px;
+      height: 28px;
+    }
   }
 
   &__btv {
     border: none;
     background-color: transparent;
-    margin-top: -15px;
+    margin: -30px -7px 0 -5px;
     cursor: pointer;
 
     &:focus path {

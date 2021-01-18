@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link href="/common.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
@@ -26,7 +27,7 @@
             </li>
         </ul>
     </div>
-    <main class="container">
+    <main class="main container">
         <div class="grid">
             <div class="grid__one one">
                     <div class="one__inner">
@@ -34,7 +35,20 @@
                         <p class="one__description">3D Touch. 12MP photos. 4K video. One powerful phone</p>
                         <a class="one__link" href="/" aria-label="Go to Learn more" title="Learn more">Learn more or visit an Apple Store today</a>
                     </div>
-                    <img class="one__img" src="/static/images/grid/block-1.png" alt="phone" width="249" height="345">
+<div class="one__img-inner">
+    <picture class="one__img">
+        <source
+            srcset="/static/images/grid/block-1-mobile.png 272w, /static/images/grid/block-1-mobile-2x.png 544w"
+            media="(max-width:375px)" sizes="272px">
+        <source
+            srcset="/static/images/grid/block-1-tablet.png 249w, /static/images/grid/block-1-tablet-2x.png 498w"
+            media="(max-width:768px)" sizes="249px">
+        <img src="/static/images/grid/block-1.png"
+            srcset="/static/images/grid/block-1.png 249w, /static/images/grid/block-1-2x.png 498w"
+            alt="phone" sizes="249px">
+    </picture>
+
+                </div>
             </div>
             <div class="grid__two two">
                 <div class="two__content">
@@ -45,7 +59,17 @@
             </div>
             <div class="grid__three three">
                 <div class="three__content">
-                    <img class="three__img" src="/static/images/grid/block-3.png" alt="phone" width="314" height="164">
+                    <picture class="three__img">
+                        <source
+                            srcset="/static/images/grid/block-3-mobile.png, /static/images/grid/block-3-mobile-2x.png 2x"
+                            media="(max-width:375px)">
+                        <source
+                            srcset="/static/images/grid/block-3-tablet.png, /static/images/grid/block-3-tablet-2x.png 2x"
+                            media="(max-width:768px)">
+                        <img src="/static/images/grid/block-3.png"
+                            srcset="/static/images/grid/block-3.png, /static/images/grid/block-3-2x.png 2x"
+                            alt="phone" width="314" height="164">
+                    </picture>
                     <p class="three__title">Our Brand New Keyboard</p>
                     <a class="three__link" href="/" aria-label="Go to Learn" title="Learn">LEARN</a>
                 </div>
@@ -55,21 +79,44 @@
                     <div class="four__inner">
                         <span class="four__text">IMAC.RETINA</span>
                         <p class="four__title">Hardly a month passes these days where</p>
-                        <img class="four__img" src="/static/images/grid/block-4.png" alt="tv" width="352" height="164">
                     </div>
                     <div class="four__inner-2">
                         <p class="four__description">Apple may be experimenting in the virtual reality space. The
                             company has been granted a patent for a head-mounted virtual reality device that would use
                             the iPhone screen as the display.</p>
                         <a class="four__link" href="/" aria-label="Go to Download now" title="Download now">DOWNLOAD NOW ›</a>
-                    </div>
                 </div>
+                <div class="four__inner-3">
+                    <picture class="four__img">
+                        <source
+                            srcset="/static/images/grid/block-4-mobile.png 375w, /static/images/grid/block-4-mobile-2x.png 750w"
+                            media="(max-width:375px)" sizes="375px">
+                        <source
+                            srcset="/static/images/grid/block-4-tablet.png 420w, /static/images/grid/block-4-tablet-2x.png 840w"
+                            media="(max-width:768px)" sizes="420px">
+                        <img src="/static/images/grid/block-4.png"
+                            srcset="/static/images/grid/block-4.png 352w, /static/images/grid/block-4-2x.png 704w"
+                            alt="tv" sizes="352px">
+                    </picture>
+
+                    </div>                
+                  </div>
             </div>
             <div class="grid__five five">
                 <div class="five__content">
                     <div class="five__block">
                         <span class="five__text">POPULAR</span>
-                        <img class="five__img" src="/static/images/grid/block-5.png" alt="iCloud" width="180" height="186">
+                        <picture class="five__img">
+                            <source
+                                srcset="/static/images/grid/block-5-mobile.png, /static/images/grid/block-5-mobile-2x.png 2x"
+                                media="(max-width:375px)">
+                            <source
+                                srcset="/static/images/grid/block-5-tablet.png, /static/images/grid/block-5-tablet-2x.png 2x"
+                                media="(max-width:768px)">
+                            <img src="/static/images/grid/block-5.png"
+                                srcset="/static/images/grid/block-5.png, /static/images/grid/block-5-2x.png 2x"
+                                alt="iCloud" width="180" height="186">
+                        </picture>
                         <span class="five__subtext">MEET</span>
                     </div>
                     <p class="five__title">iCloud</p>
@@ -81,28 +128,69 @@
             <div class="grid__six six">
                 <p class="six__text">BEST CHOICE</p>
                 <p class="six__title">Much MuchBetter Experience</p>
-                <img class="six__img" src="/static/images/grid/block-6.png" alt="Much" width="700" height="275">
+                <picture class="six__img">
+                    <source
+                        srcset="/static/images/grid/block-6-mobile.png, /static/images/grid/block-6-mobile-2x.png 2x"
+                        media="(max-width:375px)">
+                    <source
+                        srcset="/static/images/grid/block-6-tablet.png, /static/images/grid/block-6-tablet-2x.png 2x"
+                        media="(max-width:768px)">
+                    <img src="/static/images/grid/block-6.png"
+                        srcset="/static/images/grid/block-6.png, /static/images/grid/block-6-2x.png 2x"
+                        alt="Much" width="700" height="275">
+                </picture>
             </div>
             <div class="grid__seven seven">
                 <div class="seven__content">
-                    <img class="seven__img" src="/static/images/grid/block-7.png" alt="game" width="303" height="167">
+                    <picture class="seven__img">
+                        <source
+                            srcset="/static/images/grid/block-7-mobile.png, /static/images/grid/block-7-mobile-2x.png 2x"
+                            media="(max-width:375px)">
+                        <source
+                            srcset="/static/images/grid/block-7-tablet.png, /static/images/grid/block-7-tablet-2x.png 2x"
+                            media="(max-width:768px)">
+                        <img src="/static/images/grid/block-7.png"
+                            srcset="/static/images/grid/block-7.png, /static/images/grid/block-7-2x.png 2x"
+                            alt="game" width="303" height="167">
+                    </picture>
                     <p class="seven__title">Games ourpasion</p>
                     <a class="seven__link" href="/" aria-label="Go to Learn" title="Learn">LEARN ›</a>
                 </div>
             </div>
             <div class="grid__eight eight">
                 <div class="eight__content">
-                    <img class="eight__img" src="/static/images/grid/block-8.png" alt="instagram" width="59" height="59">
+                    <picture class="eight__img">
+                        <source
+                            srcset="/static/images/grid/block-8-mobile.png, /static/images/grid/block-8-mobile-2x.png 2x"
+                            media="(max-width:375px)">
+                        <source
+                            srcset="/static/images/grid/block-8-tablet.png, /static/images/grid/block-8-tablet-2x.png 2x"
+                            media="(max-width:768px)">
+                        <img src="/static/images/grid/block-8.png"
+                            srcset="/static/images/grid/block-8.png, /static/images/grid/block-8-2x.png 2x"
+                            alt="instagram" width="59" height="59">
+                    </picture>
                     <a class="eight__link" href="/" aria-label="Go to Follow me" title="Follow me">Follow me ></a>
                 </div>
             </div>
             <div class="grid__nine nine">
-                    <img class="nine__img" src="/static/images/grid/block-9.png" alt="tv" width="271" height="215">
+                <picture class="nine__img">
+                    <source
+                    srcset="/static/images/grid/block-9-mobile.png 375w, /static/images/grid/block-9-mobile-2x.png 750w"
+                    media="(max-width:375px)" sizes="375px">
+                <source
+                    srcset="/static/images/grid/block-9-tablet.png 271w, /static/images/grid/block-9-tablet-2x.png 542w"
+                    media="(max-width:768px)" sizes="271px">
+                    <img src="/static/images/grid/block-9.png"
+                        srcset="/static/images/grid/block-9.png 271w, /static/images/grid/block-9-2x.png 542w"
+                        alt="tv" sizes="271px">
+                </picture>
                     <span class="nine__title">More than just a display, it’s a vision</span>
             </div>
         </div>
     </main>
     @@include('footer/index.html')
+    <script src="scripts.js"></script>
 </body>
 
 </html>

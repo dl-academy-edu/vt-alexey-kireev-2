@@ -1,17 +1,16 @@
 @mixin media-interval($min, $max) {
-    @if $max == 0 {
-      $max: 9999px;
-    }
-    
-    @media (min-width: ($min + 1px)) and (max-width: $max) {
-      @content;
-    }
+  @if $max == 0 {
+    $max: 9999px;
   }
 
+  @media (min-width: ($min + 1px)) and (max-width: $max) {
+    @content;
+  }
+}
 
-$duration: .4s;
+$duration: 0.4s;
 
-$xl: 1400px;
+$xl: 1199px;
 $lg: 1024px;
 $md: 768px;
-$sm: 640px;
+$sm: 375px;

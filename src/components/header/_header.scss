@@ -1,11 +1,67 @@
 .header {
-  padding: 50px 110px 40px 110px;
+  padding-top: 50px;
+  padding-bottom: 40px;
   display: flex;
   align-items: center;
+  background-color: white;
 
-  
+  @media screen and (max-width: $md) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  @media screen and (max-width: $sm) {
+    padding-left: 30px;
+  }
+
+  &__mobile-button {
+    display: none;
+
+    cursor: pointer;
+
+    margin-left: auto;
+
+    background-color: transparent;
+
+    font-size: 14px;
+    line-height: 19px;
+
+    outline: none;
+    border: none;
+    @media screen and (max-width: $md) {
+      display: flex;
+      margin-right: 38px;
+      margin-top: -4px;
+    }
+
+    @media screen and (max-width: $sm) {
+      margin-right: 18px;
+      margin-top: -2px;
+    }
+  }
+
+  &__nav {
+    @media screen and (max-width: $md) {
+      display: none;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 60px;
+  }
+
   &__logo {
-    transition:  opacity $duration linear;
+    display: block;
+    @media screen and (max-width: $md) {
+      max-width: 62px;
+    }
+    @media screen and (max-width: $sm) {
+      max-width: 42px;
+    }
+  }
+
+  &__logo-link {
+    transition: opacity $duration linear;
     &:hover {
       opacity: 0.8;
     }
@@ -17,11 +73,6 @@
     &:active {
       opacity: 0.4;
     }
-  }
-  &__list {
-    flex-wrap: wrap;
-    display: flex;
-    margin-left: 60px;
   }
 
   &__item {
@@ -51,6 +102,7 @@
   }
 
   &__search {
+    display: block;
     cursor: pointer;
     border: none;
 
@@ -59,6 +111,14 @@
     margin-left: auto;
 
     transition: opacity $duration linear;
+
+    @media screen and (max-width: $md) {
+      margin-right: -7px;
+    }
+    @media screen and (max-width: $sm) {
+      margin-right: 8px;
+    }
+
     &:hover {
       opacity: 0.8;
     }
@@ -72,6 +132,12 @@
     }
   }
 
+  &__search-img {
+    @media screen and (max-width: $sm) {
+      max-width: 13px;
+    }
+  }
+
   &__contact-us {
     font-weight: bold;
     font-size: 14px;
@@ -80,7 +146,7 @@
     color: #1e0606;
 
     margin-left: 20px;
-    margin-right: 2px;
+    margin-right: 4px;
 
     transition: opacity $duration linear;
     &:hover {
@@ -94,5 +160,135 @@
     &:active {
       opacity: 0.4;
     }
+
+    @media screen and (max-width: $md) {
+      display: none;
+    }
+  }
+}
+
+.mobile-header {
+  display: block;
+
+  &::before {
+    z-index: 2;
+    background-color: #7d97da;
+    opacity: 0.8;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 30px;
+  }
+
+  &__logo {
+    display: block;
+    max-width: 62px;
+    @media screen and (max-width: $sm) {
+      max-width: 42px;
+    }
+  }
+
+  &__search {
+    cursor: pointer;
+    display: block;
+    background-color: transparent;
+    border: none;
+
+    @media screen and (max-width: $sm) {
+      margin-right: -5px;
+    }
+  }
+
+  &__search-img {
+    @media screen and (max-width: $sm) {
+      max-width: 13px;
+    }
+  }
+
+  &__content {
+    z-index: 2;
+
+    position: fixed;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    right: 0%;
+    left: 0%;
+
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.13);
+    transition: transform $duration, $duration box-shadow $duration;
+    transform: translateY(-140%);
+  }
+
+  &_open {
+    &::before {
+      content: "";
+    }
+    .mobile-header__content {
+      box-shadow: 3px 0px 6px rgba(0, 0, 0, 0.25);
+      transform: translateX(0);
+    }
+    .mobile-header__close {
+      display: block;
+    }
+  }
+
+  &__nav {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+
+  &__wrapper {
+    padding: 25px 20px 0px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__close {
+    padding-right: 35px;
+
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: none;
+
+    @media screen and (max-width: $sm) {
+      padding-right: 20px;
+    }
+  }
+
+  &__item {
+    padding-bottom: 20px;
+  }
+  &__link {
+    display: block;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1e0606;
+  }
+
+  &__contact-us {
+    display: block;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1e0606;
   }
 }

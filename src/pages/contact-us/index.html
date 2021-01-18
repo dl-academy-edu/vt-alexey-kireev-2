@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link href="/common.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
@@ -27,6 +28,7 @@
         </ul>
     </div>
     <main class="contact-us container">
+        <div class="contact-us__inner">
         <form class="contact-us__form" action="#">
             <div class="contact-us__item">
                 <label class="contact-us__label" for="name">Name</label>
@@ -35,11 +37,11 @@
             <div class="contact-us__row">
                 <div class="contact-us__item">
                     <label class="contact-us__label" for="phone">Phone</label>
-                    <input class="contact-us__input contact-us__input_phone" type="text" id="phone" aria-label="Enter on Phone" title="Phone">
+                    <input class="contact-us__input" type="text" id="phone" aria-label="Enter on Phone" title="Phone">
                 </div>
                 <div class="contact-us__item_email">
                     <label class="contact-us__label" for="email">Email</label>
-                    <input class="contact-us__input contact-us__input_email" type="text" id="email" aria-label="Enter on Email" title="Email">
+                    <input class="contact-us__input" type="text" id="email" aria-label="Enter on Email" title="Email">
                 </div>
             </div>
             <div class="contact-us__item">
@@ -65,10 +67,12 @@
             </p>
             <p>Please use the form to contact us with your needs. Send us a message and we'll
                 respond as soon as possible.</p>
-            <span>AN EXPERT IS WAITING TO HELP YOU!</span>
+            <span class="text-content__text-bold">AN EXPERT IS WAITING TO HELP YOU!</span>
+        </div>
         </div>
     </main>
     @@include('footer/index.html')
+    <script src="scripts.js"></script>
 </body>
 
 </html>

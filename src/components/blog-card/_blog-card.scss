@@ -1,16 +1,41 @@
 .blog-card {
-  max-width: 380px;
-  padding-bottom: 15px;
-
 
   &__img {
-    margin-bottom: 15px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    width: 100.5%;
+    height: 100.5%;
+    max-width: initial;
+  }
+
+  &__img-wrapper {
+    margin-bottom: 21px;
+    position: relative;
+    padding-top: 57.5%;
+    background-color: #a7a7a7;
+
+    @media screen and (max-width: $md) {
+      margin-bottom: 14px;
+    }
+
+    @media screen and (max-width: $sm) {
+      margin-bottom: 8px;
+    }
   }
 
   &__date {
     font-size: 16px;
     line-height: 22px;
     color: #818181;
+
+    @media screen and (max-width: $sm) {
+      font-size: 14px;
+      line-height: 22px;
+    }
   }
 
   &__title {
@@ -21,6 +46,16 @@
     font-size: 24px;
     line-height: 31px;
     color: #1e0606;
+
+    @media screen and (max-width: $md) {
+      padding-bottom: 6px;
+    }
+
+    @media screen and (max-width: $sm) {
+      padding-top: 2px;
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   &__link:hover,
@@ -34,5 +69,14 @@
     font-size: 18px;
     line-height: 25px;
     color: #1e0606;
+
+    @media screen and (max-width: $md) {
+      margin-bottom: -3px;
+    }
+    @media screen and (max-width: $sm) {
+      margin-bottom: -5px;
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 }
