@@ -113,8 +113,6 @@ async function buildProject() {
   scss("./src/components/common.scss", `./${finalFolder}`);
   // Обработка картинок
   img("./src/static/images", `./${finalFolder}/static/images`);
-    // Обработка музыки
-    img("./src/static/music", `./${finalFolder}/static/music`);
   // Обработка шрифтов
   fonts("./src/static/fonts", `./${finalFolder}/static/fonts`);
 }
