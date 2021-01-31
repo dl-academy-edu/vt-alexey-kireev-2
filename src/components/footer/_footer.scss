@@ -1,9 +1,18 @@
 .footer {
   background: #434343;
-  padding: 100px 110px 100px 110px;
+  padding: 102px 110px 100px 110px;
+
+  @media screen and (max-width: $lg) {
+    padding: 100px 70px 100px 70px;
+  }
 
   @media screen and (max-width: $md) {
-    padding: 80px 40px 80px 40px;
+    padding: 80px 60px 80px 60px;
+  }
+
+  @media screen and (max-width: 680px) {
+    padding: 80px 30px 80px 30px;
+
   }
 
   @media screen and (max-width: $sm) {
@@ -11,9 +20,17 @@
   }
 
   &__content {
-    margin-left: 20px;
+    max-width: 1180px;
     display: flex;
-    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: $md) {
+      display: flex;
+      justify-content: center;
+      margin-left: 0;
+      margin-right: 0;
+    }
 
     @media screen and (max-width: $sm) {
       display: block;
@@ -26,8 +43,12 @@
   width: 100%;
   margin-right: 20px;
 
+  &:nth-child(3) {
+    margin-right: 0px;
+  }
+
   @media screen and (max-width: $md) {
-    max-width: 202px;
+    max-width: 380px;
   }
 
   @media screen and (max-width: $sm) {
@@ -37,7 +58,7 @@
     margin-right: 0px;
 
     &:nth-child(3) {
-      margin-top: 19px;
+      margin-top: 21px;
     }
   }
 
@@ -59,9 +80,23 @@
     line-height: 22px;
     color: #aaaaaa;
 
+
+    @media screen and (max-width: $lg) {
+      font-size: 15px;
+    }
+
+    @media screen and (max-width: $md) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 676px) {
+      font-size: 14px;
+    }
+
     @media screen and (max-width: $sm) {
       padding-top: 0;
       padding-bottom: 4px;
+      font-size: 16px;
     }
 
     &::after {
@@ -69,7 +104,7 @@
 
       display: block;
 
-      margin-top: 23px;
+      margin-top: 21px;
 
       height: 1px;
 
@@ -87,7 +122,20 @@
 
     transition: opacity $duration linear;
 
+    @media screen and (max-width: $lg) {
+      font-size: 15px;
+    }
+
+    @media screen and (max-width: $md) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 676px) {
+      font-size: 14px;
+    }
+
     @media screen and (max-width: $sm) {
+      font-size: 16px;
       font-size: 14px;
       line-height: 19px;
     }
@@ -117,14 +165,14 @@
     font-size: 16px;
     line-height: 22px;
 
-    max-width: 380px;
+    max-width: 300px;
     width: 100%;
 
     color: #ebebeb;
     background-color: #666666;
 
     @media screen and (max-width: $md) {
-      max-width: 125px;
+      max-width: 202px;
     }
 
     @media screen and (max-width: $sm) {
@@ -138,15 +186,26 @@
 
       align-items: center;
       color: #ebebeb;
+
+      @media screen and (max-width: $sm) {
+        font-size: 14px;
+      }
     }
   }
   &__button {
     width: 81px;
     height: 40px;
 
+    @media screen and (max-width: $md) {
+      width: 134px;
+      height: 41px;
+    }
+
     @media screen and (max-width: $sm) {
       width: 72px;
       height: 38px;
+      font-size: 14px;
+      line-height: 19px;
     }
   }
 }
@@ -161,7 +220,7 @@
     }
 
     @media screen and (max-width: $sm) {
-      margin-top: 20px;
+      margin-top: 18px;
     }
   }
 
@@ -212,20 +271,15 @@
 }
 
 .footer-bottom {
-  max-width: 1200px;
+  max-width: 1180px;
   margin: 23px auto 0px auto;
-
-  @media screen and (max-width: $md) {
-    margin: 36px 20px 0;
-  }
 
   @media screen and (max-width: $sm) {
     margin: auto;
   }
 
   &::before {
-    margin-top: -12px;
-    margin-bottom: 23px;
+    margin: -12px 0 23px 0px;
     content: "";
     display: block;
     height: 1px;
@@ -243,7 +297,6 @@
 
   &__content {
     display: flex;
-    margin-left: 10px;
 
     @media screen and (max-width: $md) {
       display: block;
@@ -254,7 +307,11 @@
   &__rating {
     padding-right: 26px;
     color: #ffffff;
+    @media screen and (max-width: 282px) {
+      padding-right: 7px;
+    }
   }
+  
 
   &__web-desing,
   &__copyright,
@@ -263,10 +320,17 @@
     line-height: 22px;
 
     align-items: center;
+
+    @media screen and (max-width: $lg) {
+      font-size: 15px;
+    }
+
+    @media screen and (max-width: $md) {
+      font-size: 16px;
+    }
   }
 
   &__copyright {
-    padding-left: 156px;
     color: #ffffff;
 
     @media screen and (max-width: $md) {
@@ -276,9 +340,15 @@
 
   &__inner {
     display: flex;
+    margin-left: 8vw;
+
+    @media screen and (max-width: 1100px) {
+      margin-left: 5vw;
+    }
 
     @media screen and (max-width: $md) {
       display: flex;
+      margin-left: 0vw;
     }
 
     @media screen and (max-width: $sm) {
@@ -289,7 +359,7 @@
   &__web-desing {
     cursor: pointer;
 
-    margin-left: 110px;
+    margin-left: 6vw;
 
     color: #a2a2a2;
 
@@ -300,6 +370,9 @@
     &:focus {
       text-decoration: underline;
       color: #ffffff;
+    }
+    @media screen and (max-width: 1100px) {
+      margin-left: 2vw;
     }
 
     @media screen and (max-width: $md) {

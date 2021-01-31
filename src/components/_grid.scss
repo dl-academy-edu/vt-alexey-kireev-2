@@ -1,7 +1,6 @@
 $columncount: 12;
 $gap: 20px;
-$gap-mobile: 16px;
-
+$gap-mobile: 14px;
 // catalog
 
 @for $i from 1 through $columncount {
@@ -33,7 +32,7 @@ $gap-mobile: 16px;
   }
 }
 @for $i from 1 through $columncount {
-  @include media-interval($lg, 0) {
+  @include media-interval($md, 0) {
     .col-xl-#{$i} {
       width: (100% / 12) * $i;
       &:nth-child(6n + 4) {
@@ -73,12 +72,18 @@ $gap-mobile: 16px;
 }
 
 [class|="col"] {
-  padding-bottom: $gap;
+  padding-bottom: 23px;
   padding-left: $gap/2;
   padding-right: $gap/2;
 
+  @media screen and (max-width: 768px) {
+    padding-bottom: 20px;
+    padding-left: $gap-mobile/2;
+    padding-right: $gap-mobile/2;
+  }
+
   @media screen and (max-width: $sm) {
-    padding-bottom: $gap-mobile;
+    padding-bottom: 16px;
     padding-left: $gap-mobile/2;
     padding-right: $gap-mobile/2;
   }
@@ -119,7 +124,7 @@ $gap-blog-mobile: 20px;
   }
 }
 @for $i from 1 through $columncount {
-  @include media-interval($lg, 0) {
+  @include media-interval($md, 0) {
     .blog-col-xl-#{$i} {
       width: (100% / 12) * $i;
     }
@@ -160,7 +165,7 @@ $gap-blog-mobile: 20px;
   padding-right: $gap-blog/2;
 
   @media screen and (max-width: $sm) {
-    padding-bottom: 30px;
+    padding-bottom: 29.5px;
   }
 }
 

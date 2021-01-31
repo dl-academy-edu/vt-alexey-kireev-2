@@ -84,43 +84,54 @@
   }
 
   @media screen and (max-width: $sm) {
+    min-height: 100%;
+  }
+
+  @media screen and (max-width: 375px) {
     min-height: 440px;
-    margin-top: -30px;
+    margin-top: -29px;
   }
 
   &__form {
     flex-wrap: wrap;
     padding-top: 41px;
+    padding-right: 25px;
     display: flex;
 
     @media screen and (max-width: $md) {
-      padding-top: 30px;
+      padding-top: 32px;
+      justify-content: space-between;
     }
+
+    @media screen and (max-width: 768px) {
+      padding-top: 32px;
+      justify-content: start;
+    }
+
     @media screen and (max-width: $sm) {
       padding-top: 20px;
-      padding-left: 17px;
+      padding-left: 21px;
     }
   }
 
   &__button {
-    margin-left: 52px;
-
-    margin-top: 35px;
+    margin-top: 37px;
     width: 95px;
     height: 40px;
 
     @media screen and (max-width: $sm) {
-      margin: auto;
-      margin-top: 8px;
+      margin: 8px auto 24px auto;
     }
   }
 }
 
 .coast {
-  margin-right: 108px;
+  margin-right: 5.9vw;
+  max-width: 188px;
+  width: 100%;
 
   @media screen and (max-width: $md) {
-    margin-right: 86px;
+    margin-right: 93px;
   }
 
   @media screen and (max-width: $sm) {
@@ -140,11 +151,13 @@
   }
 
   &__range {
+    max-width: 188px;
+    width: 100%;
     max-height: 20px;
     margin: 14px 0 14px 6px;
 
     @media screen and (max-width: $sm) {
-      margin: 11px 0 10px 6px;
+      margin: 9px 0 10px 6px;
     }
   }
 
@@ -250,7 +263,7 @@
   }
 
   &__end {
-    margin-right: -12px;
+    margin-right: -17px;
     float: right;
 
     @media screen and (max-width: $md) {
@@ -258,11 +271,15 @@
       font-size: 14px;
       line-height: 19px;
     }
+
+    @media screen and (max-width: $sm) {
+      margin-right: -14px;
+    }
   }
 }
 
 .colors {
-  margin-right: 157px;
+  margin-right: 8.2vw;
 
   @media screen and (max-width: $md) {
     margin-right: 124px;
@@ -315,7 +332,7 @@
 
     @media screen and (max-width: $sm) {
       font-size: 14px;
-      line-height: 19px;
+      left: -3px;
     }
   }
 
@@ -385,7 +402,7 @@
 }
 
 .delivery {
-  margin-right: 68px;
+  margin-right: 3.7vw;
 
   @media screen and (max-width: $md) {
     margin-right: 0;
@@ -411,7 +428,7 @@
     display: block;
 
     @media screen and (max-width: $sm) {
-      margin-top: 11px;
+      margin-top: 12px;
     }
   }
   &__item {
@@ -420,9 +437,12 @@
     margin-bottom: 14px;
 
     @media screen and (max-width: $sm) {
-      margin-left: -5px;
+      margin-left: -6px;
       margin-bottom: 13px;
     }
+  }
+
+  &__text {
   }
 
   &__item input[type="radio"] {
@@ -442,7 +462,7 @@
     line-height: 18px;
 
     @media screen and (max-width: $sm) {
-      padding-left: 29px;
+      padding-left: 27px;
       font-size: 14px;
       line-height: 19px;
     }
@@ -465,6 +485,8 @@
       @media screen and (max-width: $sm) {
         width: 16px;
         height: 16px;
+        left: 5px;
+        bottom: 1px;
         background: url(/static/images/delivery-radio-m.png) 0 0 no-repeat;
       }
     }
@@ -480,11 +502,17 @@
 }
 
 .amount {
-  margin-right: 7px;
+  margin-right: 2.9vw;
 
   @media screen and (max-width: $md) {
-    margin-right: 155px;
+    margin-right: 206px;
     margin-top: 5px;
+  }
+
+  @media screen and (max-width: $sm) {
+    margin-right: 0px;
+    margin-top: 6px;
+    width: 100%;
   }
 
   &__title {
@@ -535,7 +563,9 @@
     transition: background-color 0.4s linear;
 
     @media screen and (max-width: $sm) {
+      width: 80px;
       font-size: 14px;
+      padding-left: 8px;
       line-height: 19px;
       height: 29px;
     }
@@ -574,11 +604,11 @@
   margin-bottom: 24px;
 
   @media screen and (max-width: $md) {
-    margin: -37px 0 12px 0;  
+    margin: -37px 0 12px 0;
   }
 
   @media screen and (max-width: $sm) {
-    margin: -15px 0 17px 0;  
+    margin: -15px 0 17px 0;
   }
 
   &__btv {
@@ -620,7 +650,7 @@
 
     @media screen and (max-width: $sm) {
       padding: 8px 24px 0px 11px;
-      }
+    }
   }
 
   &__item {
@@ -630,8 +660,6 @@
       padding-right: 13px;
       padding-left: 26px;
     }
-
-    
   }
 
   &__page {

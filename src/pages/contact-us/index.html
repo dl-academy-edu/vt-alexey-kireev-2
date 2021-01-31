@@ -29,46 +29,51 @@
     </div>
     <main class="contact-us container">
         <div class="contact-us__inner">
-        <form class="contact-us__form" action="#">
-            <div class="contact-us__item">
-                <label class="contact-us__label" for="name">Name</label>
-                <input class="contact-us__input" type="text" id="name" placeholder="Ivan Ivanov" aria-label="Enter on Name" title="Name">
-            </div>
-            <div class="contact-us__row">
+            <form class="contact-us__form" action="#">
                 <div class="contact-us__item">
-                    <label class="contact-us__label" for="phone">Phone</label>
-                    <input class="contact-us__input" type="text" id="phone" aria-label="Enter on Phone" title="Phone">
+                    <label class="contact-us__label" for="name">Name</label>
+                    <input class="contact-us__input" type="text" id="name" placeholder="Ivan Ivanov"
+                        aria-label="Enter on Name" title="Name">
                 </div>
-                <div class="contact-us__item_email">
-                    <label class="contact-us__label" for="email">Email</label>
-                    <input class="contact-us__input" type="text" id="email" aria-label="Enter on Email" title="Email">
+                <div class="contact-us__row">
+                    <div class="contact-us__item">
+                        <label class="contact-us__label" for="phone">Phone</label>
+                        <input class="contact-us__input" type="text" id="phone" aria-label="Enter on Phone"
+                            title="Phone">
+                    </div>
+                    <div class="contact-us__item_email">
+                        <label class="contact-us__label" for="email">Email</label>
+                        <input class="contact-us__input" type="text" id="email" aria-label="Enter on Email"
+                            title="Email">
+                    </div>
                 </div>
+                <div class="contact-us__item">
+                    <label class="contact-us__label" for="message">Message</label>
+                    <textarea class="contact-us__input contact-us__input_textarea" id="message"
+                        aria-label="Enter on Message" title="Message"></textarea>
+                </div>
+                <div class="contact-us__checkbox checkbox">
+                    <input class="checkbox__input" type="checkbox" id='contact-us-approval' aria-label="Enter on Rules"
+                        title="Rules">
+                    <label class="checkbox__label" for="contact-us-approval"><span class="checkbox__text">By
+                            clicking on the button, you consent
+                            to the processing of your personal data</span></label>
+                </div>
+                @@include("button/index.html", {
+                "class": "button contact-us__submit",
+                "type": "submit",
+                "title": "SUBMIT",
+                "title-link": "Submit",
+                "aria-label": "Press submit"
+                })
+            </form>
+            <div class="contact-us__text-content text-content">
+                <p>Our support team are on-hand to assist with any issues you are experiencing.
+                </p>
+                <p>Please use the form to contact us with your needs. Send us a message and we'll
+                    respond as soon as possible.</p>
+                <span class="text-content__text-bold">AN EXPERT IS WAITING TO HELP YOU!</span>
             </div>
-            <div class="contact-us__item">
-                <label class="contact-us__label" for="message">Message</label>
-                <textarea class="contact-us__input contact-us__input_textarea" id="message" aria-label="Enter on Message" title="Message"></textarea>
-            </div>
-            <div class="contact-us__checkbox checkbox">
-                <input class="checkbox__input" type="checkbox" id='contact-us-approval' aria-label="Enter on Rules" title="Rules">
-                <label class="checkbox__label" for="contact-us-approval"><span class="checkbox__text">By
-                        clicking on the button, you consent
-                        to the processing of your personal data</span></label>
-            </div>
-            @@include("button/index.html", {
-            "class": "button contact-us__submit",
-            "type": "submit",
-            "title": "SUBMIT",
-            "title-link": "Submit",
-            "aria-label": "Press submit"
-            })
-        </form>
-        <div class="contact-us__text-content text-content">
-            <p>Our support team are on-hand to assist with any issues you are experiencing.
-            </p>
-            <p>Please use the form to contact us with your needs. Send us a message and we'll
-                respond as soon as possible.</p>
-            <span class="text-content__text-bold">AN EXPERT IS WAITING TO HELP YOU!</span>
-        </div>
         </div>
     </main>
     @@include('footer/index.html')

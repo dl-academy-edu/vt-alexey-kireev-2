@@ -35,12 +35,21 @@
       max-width: 156px;
       font-size: 24px;
       line-height: 29px;
+      padding-top: 10px;
     }
 
     @media screen and (max-width: $sm) {
       max-width: 123px;
       font-size: 18px;
       line-height: 22px;
+    }
+
+    @media screen and (max-width: 350px) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 328px) {
+      font-size: 12px;
     }
   }
 

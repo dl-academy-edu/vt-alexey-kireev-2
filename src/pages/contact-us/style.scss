@@ -85,6 +85,7 @@
 
   @media screen and (max-width: $sm) {
     text-align: center;
+    padding: 4px 0px 43px 0px;
   }
 
   p {
@@ -101,7 +102,7 @@
     @media screen and (max-width: $sm) {
       font-size: 14px;
       line-height: 19px;
-      margin-bottom: 16px;
+      margin-bottom: 15px;
     }
   }
 
@@ -132,12 +133,14 @@
 
   @media screen and (max-width: $md) {
     display: block;
-    padding-top: 26px;
+    padding-top: 28px;
     padding-bottom: 48px;
   }
 
   @media screen and (max-width: $sm) {
     padding-top: 5px;
+    padding-bottom: 50px;
+
   }
   &__inner {
     display: flex;
@@ -163,32 +166,28 @@
 
     @media screen and (max-width: $md) {
       order: 2;
-      padding: 21px 56px 30px;
+      padding: 19px 56px 30px;
     }
 
     @media screen and (max-width: $sm) {
       order: 2;
-      padding: 10px 23px 30px 25px;
+      padding: 12px 23px 27px 22px;
       margin: -18px 0 -3px;
     }
   }
 
   &__submit {
-    margin-top: -4px;
+    margin-top: -20px;
     width: 106px;
     height: 40px;
-
-    @media screen and (max-width: $md) {
-      margin-top: -2px;
-    }
 
     @media screen and (max-width: $sm) {
       width: 98px;
       height: 38px;
       font-size: 14px;
       line-height: 19px;
-      margin-top: -19px;
-      margin-left: 2px;
+      margin-top: -15px;
+      margin-left: 3px;
     }
   }
 
@@ -210,10 +209,11 @@
     &::placeholder {
       font-size: 18px;
       line-height: 25px;
+      font-family: "Roboto", "Arial", sans-serif;
       color: #1e0606;
 
       @media screen and (max-width: $md) {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 19px;
       }
 
@@ -267,7 +267,7 @@
     color: #1e0606;
 
     @media screen and (max-width: $md) {
-      margin-bottom: 2px;
+      margin-bottom: 4px;
     }
 
     @media screen and (max-width: $sm) {
@@ -282,11 +282,11 @@
   padding: 17px 0px 17px;
 
   @media screen and (max-width: $md) {
-    padding: 20px 0px 17px;
+    padding: 18px 0px 17px;
   }
 
   @media screen and (max-width: $sm) {
-    padding: 12px 0 7px;
+    padding: 11px 2px 9px;
   }
 
   &__input {
@@ -310,7 +310,10 @@
 
     user-select: none;
     position: relative;
-    top: -4px;
+    display: block;
+    left: 32px;
+    top: -22px;
+    padding-right: 20px;
 
     font-size: 14px;
     line-height: 19px;
@@ -320,10 +323,14 @@
     }
 
     @media screen and (max-width: $sm) {
-      display: inline-flex;
-      max-width: 256px;
-      top: -23px;
-      left: 32px;
+      top: -21px;
+      left: 28px;
+    }
+
+    @media screen and (max-width: 375px) {
+      top: -20px;
+      left: 29px;
+      line-height: 17px;
     }
   }
 
