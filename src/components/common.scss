@@ -70,6 +70,16 @@ img {
   height: auto;
 }
 
+button {
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+input:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .audio-fon {
   display: none;
 }
