@@ -121,7 +121,10 @@ async function buildProject() {
 function watch() {
   browserSync.init({
     server: {
-      baseDir: `./${finalFolder}`
+      baseDir: `./${finalFolder}`,
+      routes: {
+        '/node_modules': 'node_modules'
+      }
     }
   });
   // При изменении любого типа файлов пересобрать проект
