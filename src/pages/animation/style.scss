@@ -258,15 +258,12 @@
     }
   }
 
-  &__car-inner {
+  &__car {
     position: absolute;
     animation: car 20s linear infinite;
     top: 54%;
     left: -76%;
-  }
 
-  &__car {
-    position: relative;
     &_one {
       position: relative;
       max-width: 250px;
