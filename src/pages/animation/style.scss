@@ -258,14 +258,17 @@
     }
   }
 
-  &__car {
+  &__car-inner{
     position: absolute;
     animation: car 20s linear infinite;
     top: 54%;
     left: -76%;
+  }
+
+  &__car {
+    position: relative;
 
     &_one {
-      position: relative;
       max-width: 250px;
       max-height: 99px;
       width: 13vw;
@@ -284,7 +287,6 @@
       }
     }
     &_two {
-      position: relative;
       max-width: 203px;
       max-height: 96px;
       width: 11vw;
@@ -304,7 +306,6 @@
     }
 
     &_three {
-      position: relative;
       max-width: 246px;
       max-height: 65px;
       width: 13vw;
@@ -323,7 +324,6 @@
     }
 
     &_four {
-      position: relative;
       max-width: 268px;
       max-height: 126px;
       width: 14vw;
