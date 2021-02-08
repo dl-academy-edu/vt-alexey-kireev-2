@@ -1,0 +1,138 @@
+.toys-card {
+  position: relative;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    width: 100.5%;
+    height: 100.5%;
+    max-width: initial;
+  }
+
+  &__img-wrapper {
+    position: relative;
+    padding-top: 100.5%;
+    background-color: #a7a7a7;
+  }
+
+  &__title {
+    padding-top: 35px;
+    padding-bottom: 14px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #1e0606;
+
+    @media screen and (max-width: $md) {
+      padding-top: 21px;
+      padding-bottom: 5px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    @media screen and (max-width: $sm) {
+      padding-top: 18px;
+    }
+  }
+
+  &__price {
+    padding-bottom: 25px;
+
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #1e0606;
+
+    @media screen and (max-width: $md) {
+      padding-bottom: 20px;
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    @media screen and (max-width: $sm) {
+      padding-bottom: 15px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  &__link {
+    &:hover::after {
+      content: "LEARN MORE";
+      max-width: 207px;
+      max-height: 207px;
+      display: flex;
+      position: absolute;
+      background-color: #e5eaf8;
+
+      margin: auto;
+      left: 0px;
+      bottom: 0;
+      right: 0;
+      top: -70px;
+      opacity: 0.9;
+
+      /* Текст */
+
+      font-family: "Montserrat", "Arial", sans-serif;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 29px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      color: #1e0606;
+      text-shadow: 0px 0px 40px rgba(147, 3, 3, 0.25);
+
+      @media screen and (max-width: $md) {
+        top: -68px;
+        max-width: 184px;
+        max-height: 186px;
+        font-size: 22px;
+        line-height: 26px;
+      }
+
+      @media screen and (max-width: 768px) {
+        top: -74px;
+        max-width: 142px;
+        max-height: 139px;
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+
+      @media screen and (max-width: $sm) {
+        top: -81px;
+        max-width: 175px;
+        max-height: 176px;
+        
+        font-size: 18px;
+        line-height: 18px;
+      }
+
+      @media screen and (max-width: 375px) {
+        top: -84px;
+        max-width: 115px;
+        max-height: 110px;
+        font-size: 14px;
+      }
+
+      @media screen and (max-width: 285px) {
+        top: -94px;
+        max-width: 94px;
+        max-height: 73px;
+        font-size: 12px;
+      }
+    }
+
+    &:active::after {
+      opacity: 0.67;
+    }
+  }
+}

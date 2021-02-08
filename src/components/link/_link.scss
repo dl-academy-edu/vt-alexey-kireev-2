@@ -1,27 +1,33 @@
 .button {
     cursor: pointer;
     border: none;
+
     display: flex;
+
     background-color: #000000;
+    color: #ffffff;
+
     font-weight: bold;
     font-size: 16px;
     line-height: 22px;
-    color: #ffffff;
-    text-align: center;
     text-transform: uppercase;
+
+    text-align: center;
     justify-content: center;
     align-items: center;
+
+    transition: background-color $duration linear;
+   &:hover {
+      background-color: #c29974;
+    }
+    
+    &:active {
+      background-color: #cfaf91;
+    }
+    
+   &:disabled {
+      background-color: #c1c1c1;
+      color: #e1e1e1;
+    }
   }
   
-  .button:hover {
-    background-color: #c29974;
-  }
-  
-  .button:active {
-    background-color: #cfaf91;
-  }
-  
-  .button:disabled {
-    background-color: #c1c1c1;
-    color: #e1e1e1;
-  }

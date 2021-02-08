@@ -1,82 +1,145 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link href="/common.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
     <link rel="stylesheet" href="/static/fonts/stylesheet.css" />
     <link rel="shortcut icon" href="/static/images/favicon.ico">
     <title>CATALOG</title>
+    <meta name="description" content="Catalog" />
+
 </head>
 
 <body>
     @@include('header/index.html')
-    <div class="catalog-block-title container">
-        <h1 class="catalog-title">CATEGORY PRODUCTS</h1>
-        <div class="catalog-block-navigation">
-            <ul class="catalog-navigation-list">
-                <li class="catalog-navigation-item">
-                    <a class="catalog-navigation-link" href="/" title="Home">Home</a>
+    <div class="navigation container">
+        <h1 class="navigation__title">CATEGORY PRODUCTS</h1>
+        <div class="navigation__content">
+            <ul class="navigation__breadcrumbs">
+                <li class="navigation__item">
+                    <a class="navigation__link" href="/" aria-label="Go to Home" title="Home">Home</a>
                 </li>
                 <li>
-                    <div class="catalog-navigation-link-disabled">Catalog</div>
+                    <a class="navigation__link navigation__link_disabled" tabindex="1">Catalog</a>
                 </li>
             </ul>
         </div>
     </div>
     <main class="catalog container">
-        <article class="catalog-block ">
-            <ul class="catalog-block-list">
-                @@include("category-products-block-item/index.html", {
-                "title": "APPAREL KIDS",
-                "title-link": "apparel kids",
-                "img": "image-1.jpg"
-                })
-                @@include("category-products-block-item/index.html", {
-                "title": "HOLIDAY SHOP",
-                "title-link": "holiday shop",
-                "img": "image-2.jpg"
-                })
-                @@include("category-products-block-item/index.html", {
-                "title": "TOYS",
-                "title-link": "toys",
-                "img": "image-3.jpg"
-                })
-                @@include("category-products-block-item/index.html", {
-                "title": "ACCESSORIES",
-                "title-link": "accessories",
-                "img": "image-4.jpg"
-                })
-                @@include("category-products-block-item/index.html", {
-                "title": "SALE",
-                "title-link": "sale",
-                "img": "image-5.jpg"
-                })
-                @@include("category-products-block-item/index.html", {
-                "title": "apparel adults",
-                "title-link": "apparel adults",
-                "img": "image-6.jpg"
-                })
 
+        <article class="catalog__contect">
+            <h2 class="visibility-hidden">Catalog</h2>
+            <ul class="row">
+                <li class="col-6 col-md-4 col-xl-3">
+                    @@include("category-card/index.html", {
+                    "title": "APPAREL KIDS",
+                    "title-link": "apparel kids",
+                    "aria-label": "Go to APPAREL KIDS",
+                    "img": "image-1.jpg",
+                    "img2x": "image-1-2x.jpg",
+                    "imgTablet": "image-1-tablet.jpg",
+                    "imgTablet2x": "image-1-tablet-2x.jpg",
+                    "imgMobile": "image-1-mobile.jpg",
+                    "imgMobile2x": "image-1-mobile-2x.jpg",
+                    "alt": "APPAREL KIDS"
+                    })
+                </li>
+                <li class="col-6 col-md-4 col-xl-3">
+                    @@include("category-card/index.html", {
+                    "title": "HOLIDAY SHOP",
+                    "title-link": "holiday shop",
+                    "aria-label": "Go to HOLIDAY SHOP",
+                    "img": "image-2.jpg",
+                    "img2x": "image-2-2x.jpg",
+                    "imgTablet": "image-2-tablet.jpg",
+                    "imgTablet2x": "image-2-tablet-2x.jpg",
+                    "imgMobile": "image-2-mobile.jpg",
+                    "imgMobile2x": "image-2-mobile-2x.jpg",
+                    "alt": "HOLIDAY SHOP"
+                    })
+                </li>
+                <li class="col-6 col-md-4  col-xl-3">
+                    @@include("category-card/index.html", {
+                    "title": "TOYS",
+                    "title-link": "toys",
+                    "aria-label": "Go to TOYS",
+                    "img": "image-3.jpg",
+                    "img2x": "image-3-2x.jpg",
+                    "imgTablet": "image-3-tablet.jpg",
+                    "imgTablet2x": "image-3-tablet-2x.jpg",
+                    "imgMobile": "image-3-mobile.jpg",
+                    "imgMobile2x": "image-3-mobile-2x.jpg",
+                    "alt": "TOYS"
+                    })
+                </li>
+                <li class="col-6 col-md-4 col-xl-3">
+                    @@include("category-card/index.html", {
+                    "title": "ACCESSORIES",
+                    "title-link": "accessories",
+                    "aria-label": "Go to ACCESSORIES",
+                    "img": "image-4.jpg",
+                    "img2x": "image-4-2x.jpg",
+                    "imgTablet": "image-4-tablet.jpg",
+                    "imgTablet2x": "image-4-tablet-2x.jpg",
+                    "imgMobile": "image-4-mobile.jpg",
+                    "imgMobile2x": "image-4-mobile-2x.jpg",
+                    "alt": "ACCESSORIES"
+                    })
+                </li>
+                <li class="col-6 col-md-4 col-xl-3">
+                    @@include("category-card/index.html", {
+                    "title": "ACCESSORIES",
+                    "title-link": "accessories",
+                    "aria-label": "Go to ACCESSORIES",
+                    "img": "image-4.jpg",
+                    "img2x": "image-4-2x.jpg",
+                    "imgTablet": "image-4-tablet.jpg",
+                    "imgTablet2x": "image-4-tablet-2x.jpg",
+                    "imgMobile": "image-4-mobile.jpg",
+                    "imgMobile2x": "image-4-mobile-2x.jpg",
+                    "alt": "ACCESSORIES"
+                    })
+                </li>
+                <li class="col-6 col-md-4 col-xl-3">
+                    @@include("category-card/index.html", {
+                    "title": "ACCESSORIES",
+                    "title-link": "accessories",
+                    "aria-label": "Go to ACCESSORIES",
+                    "img": "image-4.jpg",
+                    "img2x": "image-4-2x.jpg",
+                    "imgTablet": "image-4-tablet.jpg",
+                    "imgTablet2x": "image-4-tablet-2x.jpg",
+                    "imgMobile": "image-4-mobile.jpg",
+                    "imgMobile2x": "image-4-mobile-2x.jpg",
+                    "alt": "ACCESSORIES"
+                    })
+                </li>
             </ul>
         </article>
     </main>
-    <section class="product-description-block container">
-        <h2 class="product-description-title">Product Description</h2>
-        <p class="product-description">Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and
-            almost really cry. You can even
-            bathe her, just like a little sister.</p>
-        <p class="product-description">A toy with a height of 43 cm bends its knees, the head rotates, it can stand
-            upright. Such a doll will be an
-            excellent choice for a gift for a girl from 4 years old.</p>
-        <p class="product-description">The set includes a miniature set of fashionable clothes, a hairbrush, a bottle
-            for water, a pair of hairpins
-            and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.
-        </p>
+    <section class="catalog__description description container">
+        <h2 class="description__title">Product Description</h2>
+        <div class="description__text-content text-content">
+            <p>Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and
+                almost really cry. You can even
+                bathe her, just like a little sister.</p>
+            <p>A toy with a height of 43 cm bends its knees, the head rotates, it can stand
+                upright. Such a doll will be an
+                excellent choice for a gift for a girl from 4 years old.</p>
+            <p>The set includes a miniature set of fashionable clothes, a hairbrush, a bottle
+                for water, a pair of hairpins
+                and elastic bands for hair, as well as two bracelets: one for the doll, the other for her young
+                mistress.
+            </p>
+        </div>
     </section>
     @@include('footer/index.html')
+    <script src="scripts.js"></script>
+    <script src="/node_modules/focus-visible/dist/focus-visible.min.js"></script>
 </body>
 
 </html>

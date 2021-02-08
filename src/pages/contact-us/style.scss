@@ -1,14 +1,7 @@
-.contact-us-block {
-    display: flex;
-    padding: 34px 64px 59px 109px;
-  }
-  
-  .contact-us-block-title {
-    padding-left: 110px;
-    padding-right: 110px;
-  }
-  
-  .contact-us-title {
+@import "./../../components/vars";
+
+.navigation {
+  &__title {
     word-spacing: 13px;
     margin-top: 18px;
     font-family: "Montserrat", "Arial", sans-serif;
@@ -16,118 +9,189 @@
     line-height: 49px;
     text-transform: uppercase;
     color: #1e0606;
+
+    @media screen and (max-width: $md) {
+      word-spacing: 0;
+      margin-top: 47px;
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @media screen and (max-width: $sm) {
+      font-size: 24px;
+      line-height: 29px;
+      margin-top: 24px;
+    }
   }
-  
-  .contact-us-navigation-link:hover {
-    opacity: 0.5;
-  }
-  
-  .contact-us-navigation-list {
+
+  &__breadcrumbs {
     display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: $md) {
+      margin-top: 13px;
+    }
+
+    @media screen and (max-width: $sm) {
+      margin-top: 10px;
+    }
   }
-  
-  .contact-us-navigation::after {
-    content: url(/static/images/Vector-Stroke.png);
-    padding: 0px 20px;
-  }
-  
-  .contact-us-navigation-link,
-  .contact-us-navigation-link-disabled {
+
+  &__link {
     font-family: "Crimson Text", "Arial", sans-serif;
     font-style: italic;
     font-size: 20px;
     line-height: 25px;
     color: #1e0606;
+
+    transition: opacity 0.4s linear;
+
+    @media screen and (max-width: $sm) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &_disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
   }
-  
-  .contact-us-navigation-link-disabled {
-    cursor: default;
-    pointer-events: none;
-    opacity: 0.5;
+
+  &__item {
+    &::after {
+      content: url(/static/images/vector-stroke.svg);
+      padding: 0px 17px;
+
+      @media screen and (max-width: $sm) {
+        content: url(/static/images/vector-stroke-mobile.svg);
+        padding: 0px 12px;
+      }
+    }
   }
-  
-  .contact-us-text-block {
-    padding-left: 120px;
+}
+
+.text-content {
+  padding-bottom: 45px;
+  padding-left: 118px;
+
+  @media screen and (max-width: $md) {
+    padding-left: 0px;
+    text-align: center;
   }
-  
-  .contact-us-text-1,
-  .contact-us-text-2 {
-    width: 384px;
+
+  @media screen and (max-width: $sm) {
+    text-align: center;
+    padding: 4px 0px 43px 0px;
+  }
+
+  p {
+    max-width: 384px;
     font-size: 16px;
     line-height: 22px;
     color: #1e0606;
     margin-bottom: 20px;
+
+    @media screen and (max-width: $md) {
+      max-width: 536px;
+    }
+
+    @media screen and (max-width: $sm) {
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 15px;
+    }
   }
-  
-  .contact-us-text-1 {
-    min-height: 44px;
-  }
-  
-  .contact-us-text-2 {
-    min-height: 66px;
-  }
-  
-  .contact-us-text-bottom {
+
+  &__text-bold {
     font-family: "Montserrat", "Arial", sans-serif;
     font-weight: bold;
     font-size: 26px;
     line-height: 34px;
     text-transform: uppercase;
     color: #c29974;
+
+    @media screen and (max-width: $md) {
+      max-width: 329px;
+    }
+
+    @media screen and (max-width: $sm) {
+      font-size: 24px;
+      line-height: 34px;
+    }
   }
-  
-  .contact-us-form {
+}
+.contact-us {
+  flex-flow: wrap;
+  display: flex;
+  padding-top: 34px;
+  padding-bottom: 59px;
+  align-items: flex-start;
+
+  @media screen and (max-width: $md) {
+    display: block;
+    padding-top: 28px;
+    padding-bottom: 48px;
+  }
+
+  @media screen and (max-width: $sm) {
+    padding-top: 5px;
+    padding-bottom: 50px;
+
+  }
+  &__inner {
+    display: flex;
+    @media screen and (max-width: $md) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__text-content {
+    @media screen and (max-width: $md) {
+      order: 1;
+    }
+  }
+
+  &__form {
     position: relative;
     padding: 21px 41px 29px;
     background-color: #e5eaf8;
-    max-width: 685px;
+    max-width: 680px;
+    width: 100%;
     min-height: 542px;
+
+    @media screen and (max-width: $md) {
+      order: 2;
+      padding: 19px 56px 30px;
+    }
+
+    @media screen and (max-width: $sm) {
+      order: 2;
+      padding: 12px 23px 27px 22px;
+      margin: -18px 0 -3px;
+    }
   }
-  
-  .form-button-submit {
-    margin-top: -4px;
+
+  &__submit {
+    margin-top: -20px;
     width: 106px;
     height: 40px;
+
+    @media screen and (max-width: $sm) {
+      width: 98px;
+      height: 38px;
+      font-size: 14px;
+      line-height: 19px;
+      margin-top: -15px;
+      margin-left: 3px;
+    }
   }
-  
-  .contact-us-label-checkbox label {
-    font-size: 14px;
-    line-height: 19px;
-  }
-  .contact-us-label-checkbox {
-    position: relative;
-    cursor: pointer;
-    margin-top: -3px;
-  }
-  
-  .contact-us-label-checkbox::before {
-    display: inline-block;
-    content: "";
-    width: 19px;
-    height: 19px;
-    margin-right: 15px;
-    border: 2px solid #c29974;
-    box-sizing: border-box;
-    border-radius: 3px;
-  }
-  
-  .contact-us-label-checkbox::after {
-    color: #c29974;
-    position: absolute;
-    left: 3px;
-    content: url(/static/images/Vector-contact-us-chack-box.png);
-  }
-  
-  .contact-us-checkbox-input:checked + .contact-us-label-checkbox::after {
-    content: "";
-  }
-  
-  .textarea {
-    max-width: 600px;
-    height: 150px;
-  }
-  
-  .contact-us-input-item {
+
+  &__input {
     padding: 11px 20px 11px;
     display: block;
     width: 100%;
@@ -137,70 +201,166 @@
     font-size: 18px;
     line-height: 25px;
     color: #1e0606;
+
+    @media screen and (max-width: $sm) {
+      padding: 6px 16px;
+    }
+
+    &::placeholder {
+      font-size: 18px;
+      line-height: 25px;
+      font-family: "Roboto", "Arial", sans-serif;
+      color: #1e0606;
+
+      @media screen and (max-width: $md) {
+        font-size: 14px;
+        line-height: 19px;
+      }
+
+      @media screen and (max-width: $sm) {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    &:hover {
+      border: 2px solid rgba(0, 0, 0, 0.3);
+    }
+
+    &_textarea {
+      max-width: 600px;
+      height: 150px;
+    }
   }
-  
-  .contact-us-input-email {
-    margin-left: 20px;
+
+  &__item {
+    width: 100%;
+
+    &_email {
+      width: 100%;
+      margin-left: 20px;
+
+      @media screen and (max-width: $sm) {
+        margin-left: 0px;
+      }
+    }
   }
-  
-  .contact-us-input-email-input,
-  .contact-us-input-phone {
-    width: 290px;
-    height: 50px;
-    padding: 14px 20px 11px;
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    background-color: #ffffff;
-    font-size: 18px;
-    line-height: 25px;
-    color: #1e0606;
+
+  &__row {
+    width: 100%;
+    display: flex;
+
+    @media screen and (max-width: $sm) {
+      display: block;
+    }
   }
-  
-  .contact-us-input-phone:hover,
-  .contact-us-input-email-input:hover,
-  .contact-us-input-item:hover {
-    border: 2px solid rgba(0, 0, 0, 0.3);
-  }
-  
-  .contact-us-input-item::placeholder {
-    font-size: 18px;
-    line-height: 25px;
-    color: #1e0606;
-  }
-  
-  .contact-us-chackbox-text {
-    user-select: none;
-    position: relative;
-    top: -2px;
-    font-size: 14px;
-    line-height: 19px;
-  }
-  
-  .input-label {
+
+  &__label {
     user-select: none;
     margin-bottom: 4px;
-    display: block;
     margin-top: 20px;
-    font-family: "Roboto", "Arial", sans-serif;
+
+    display: block;
+
     font-size: 14px;
     line-height: 19px;
     color: #1e0606;
+
+    @media screen and (max-width: $md) {
+      margin-bottom: 4px;
+    }
+
+    @media screen and (max-width: $sm) {
+      order: 2;
+      margin: 12px 8px 5px 2px;
+    }
   }
-  
-  .inputs-row-two {
-    display: flex;
+}
+
+.checkbox {
+  display: flex;
+  padding: 17px 0px 17px;
+
+  @media screen and (max-width: $md) {
+    padding: 18px 0px 17px;
   }
-  
-  .checkbox-block {
-    display: flex;
-    padding: 22px 15px 20px 0px;
+
+  @media screen and (max-width: $sm) {
+    padding: 11px 2px 9px;
   }
-  
-  .checkbox-block input[type="checkbox"] {
+
+  &__input {
     opacity: 0;
     position: absolute;
+    border: 2px solid #c29974;
+    box-sizing: border-box;
+    border-radius: 3px;
   }
-  
-  .checkbox-block input[type="checkbox"]:focus + label {
-    outline: 1px solid rgb(0, 0, 0);   
+
+  &__input[type="checkbox"]:focus + label {
+    outline: 1px solid rgb(0, 0, 0);
   }
+
+  &__input:checked + &__label::after {
+    content: "";
+  }
+
+  &__text {
+    color: #1e0606;
+
+    user-select: none;
+    position: relative;
+    display: block;
+    left: 32px;
+    top: -22px;
+    padding-right: 20px;
+
+    font-size: 14px;
+    line-height: 19px;
+
+    @media screen and (max-width: $md) {
+      font-family: "Roboto", "Arial", sans-serif;
+    }
+
+    @media screen and (max-width: $sm) {
+      top: -21px;
+      left: 28px;
+    }
+
+    @media screen and (max-width: 375px) {
+      top: -20px;
+      left: 29px;
+      line-height: 17px;
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      text-decoration: underline;
+      color: #000000;
+    }
+
+    &::before {
+      margin-top: 3px;
+      margin-right: 15px;
+      display: inline-block;
+      content: "";
+      width: 19px;
+      height: 19px;
+      border: 2px solid #c29974;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+
+    &::after {
+      color: #c29974;
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      content: url(/static/images/vector-contact-us-chack-box.png);
+    }
+  }
+}

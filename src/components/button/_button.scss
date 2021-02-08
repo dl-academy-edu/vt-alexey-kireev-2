@@ -1,27 +1,37 @@
 .button {
-    cursor: pointer;
-    border: none;
-    display: flex;
-    background-color: #000000;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 22px;
-    color: #ffffff;
-    text-align: center;
-    text-transform: uppercase;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .button:hover {
-    background-color: #c29974;
-  }
-  
-  .button:active {
+  cursor: pointer;
+
+  display: flex;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #ffffff;
+  background-color: #000000;
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color $duration linear;
+
+  &:active {
     background-color: #cfaf91;
   }
-  
-  .button:disabled {
+
+  &:disabled {
+    user-select: none;
     background-color: #c1c1c1;
     color: #e1e1e1;
   }
+
+  &:hover {
+    background-color: #c29974;
+  }
+
+  &:focus {
+    background-color: #c29974;
+  }
+}

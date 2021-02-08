@@ -1,3 +1,5 @@
+@import "./vars";
+
 * {
   font-family: "Open Sans", "Montserrat", "Roboto", "Crimson Text", Arial,
     sans-serif;
@@ -29,8 +31,30 @@ p {
 
 .container {
   max-width: 1400px;
+  padding-left: 110px;
+  padding-right: 110px;
   margin-right: auto;
   margin-left: auto;
+
+  @media screen and (max-width: $lg) {
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+
+  @media screen and (max-width: $md) {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  @media screen and (max-width: 730px) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @media screen and (max-width: $sm) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 
 .visibility-hidden {
@@ -40,11 +64,29 @@ p {
   height: 0;
   left: -9999px;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.audio-fon {
+  display: none;
+}
+
+@import "./grid";
+
 // Подключение компонентов
 @import "./header/header";
 @import "./footer/footer";
-@import "./category-products-block-item/category-products-block-item";
-@import "./toys-item/toys-item";
-@import "./blog-item/blog-item";
+@import "./category-card/category-card";
+@import "./category-slider/category-slider";
+@import "./toys-card/toys-card";
+@import "./blog-card/blog-card";
 @import "./button/button";
 @import "./link/link";
+@import "./svg/svg";
